@@ -1377,14 +1377,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.08715578, y: 0, z: 0, w: 0.9961947}
-  m_LocalPosition: {x: 0, y: 3, z: -5.5}
+  m_LocalRotation: {x: 0.10990777, y: 0, z: 0, w: 0.9939418}
+  m_LocalPosition: {x: 0, y: 3.5, z: -5.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 12.62, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1397,6 +1397,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 766b4cdceefde6e42a2e5de649d325c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  submerged: 0
+  submergedCam: 0.5
+  notSubmergedCam: 3.5
+  smothness: 6
 --- !u!1 &992550336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,11 +1539,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacles:
   - {fileID: 1043556987926024859, guid: b969a54a2b3e2be4ea6e84329c4a7824, type: 3}
-  - {fileID: 1627274445534624449, guid: c5b984018025a934cbd881fa65417db2, type: 3}
-  - {fileID: 1627274445534624449, guid: c5b984018025a934cbd881fa65417db2, type: 3}
+  - {fileID: 1979332918920184969, guid: a99be1d88edbf9d4882c879561ea60b7, type: 3}
+  - {fileID: 1627274445534624449, guid: 6eb9615188d48fa4788dd251b5236aed, type: 3}
+  - {fileID: 1627274445534624449, guid: de6b7bd255a7bc641a48b58ff30a055f, type: 3}
   numberOfObstacles: {x: 12, y: 17}
   coin: {fileID: 9053949989179448658, guid: b699a7b725e7ddb48896ae4a8ef44ab8, type: 3}
-  numberOfCoins: {x: 30, y: 45}
+  numberOfCoins: {x: 10, y: 20}
   newObstacles: []
   newCoins: []
 --- !u!65 &1062492497
@@ -1756,10 +1761,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacles:
   - {fileID: 1043556987926024859, guid: b969a54a2b3e2be4ea6e84329c4a7824, type: 3}
-  - {fileID: 1627274445534624449, guid: c5b984018025a934cbd881fa65417db2, type: 3}
+  - {fileID: 1979332918920184969, guid: a99be1d88edbf9d4882c879561ea60b7, type: 3}
+  - {fileID: 1627274445534624449, guid: 6eb9615188d48fa4788dd251b5236aed, type: 3}
+  - {fileID: 1627274445534624449, guid: de6b7bd255a7bc641a48b58ff30a055f, type: 3}
   numberOfObstacles: {x: 15, y: 20}
   coin: {fileID: 9053949989179448658, guid: b699a7b725e7ddb48896ae4a8ef44ab8, type: 3}
-  numberOfCoins: {x: 30, y: 50}
+  numberOfCoins: {x: 10, y: 20}
   newObstacles: []
   newCoins: []
 --- !u!4 &1948661636

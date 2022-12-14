@@ -55,7 +55,7 @@ public class Track : MonoBehaviour
 
         for (int i = 0; i < newCoins.Count; i++)
         {
-            float maxZpos = minZpos + 5f;
+            float maxZpos = minZpos + 15f;
             float randomZpos = Random.Range(minZpos, maxZpos);
             newCoins[i].transform.localPosition = new Vector3(transform.position.x, transform.position.y, randomZpos);
             newCoins[i].SetActive(true);

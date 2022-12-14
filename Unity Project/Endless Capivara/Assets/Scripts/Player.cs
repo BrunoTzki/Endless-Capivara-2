@@ -24,14 +24,15 @@ public class Player : MonoBehaviour
     private Vector3 verticalTargetPosition;
     private bool jumping = false;
     private float jumpStart;
-    private bool sliding = false;
-    private float slideStart;
+    private int currentlaneY = 2;
+    private bool submerged = false;
     //private Vector3 boxColliderSize;
     private bool isSwipping = false;
     private Vector2 startingTouch;
     private int currentLife;
     private bool invincible = false;
     private UiManager uiManager;
+    private CameraFollow cameraFollow;
     private int currentCoins;
     private float score;
 
@@ -46,6 +47,7 @@ public class Player : MonoBehaviour
         currentLife = MaxLife;
         speed = minSpeed;
         uiManager = FindObjectOfType<UiManager>();
+        cameraFollow = FindObjectOfType<CameraFollow>();
     }
 
     // Update is called once per frame
@@ -67,7 +69,7 @@ public class Player : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            Slide();
+            Submerge(-1);
         }
 
         if(Input.touchCount == 1)
@@ -82,11 +84,21 @@ public class Player : MonoBehaviour
                     {
                         if(diff.y < 0)
                         {
-                            Slide();
+                            Submerge(-2);
+                            submerged = true;
                         }
                         else
                         {
-                            Jump();
+                            if (currentlaneY == 0)
+                            {
+                                Submerge(2);
+                                submerged = false;
+                                cameraFollow.submerged = false;
+                            }
+                            else
+                            {
+                                Jump();
+                            }
                         }
                     }
                     else
@@ -132,25 +144,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            verticalTargetPosition.y = Mathf.MoveTowards(verticalTargetPosition.y, 0, 5 * Time.deltaTime);
-        }
-
-        if (sliding)
-        {
-            float ratio = (transform.position.z - slideStart) / slideLength;
-            if(ratio >= 1)
-            {
-                sliding = false;
-                anim.SetBool("Sliding", false);
-                //boxCollider.size = boxColliderSize;
-            }
-            else
-            {
-                verticalTargetPosition.y = Mathf.Sin(ratio * Mathf.PI) * slideHeight;
-            }
-        }
-        else
-        {
+            if (!submerged)
             verticalTargetPosition.y = Mathf.MoveTowards(verticalTargetPosition.y, 0, 5 * Time.deltaTime);
         }
 
@@ -171,7 +165,19 @@ public class Player : MonoBehaviour
         if (targetlane < 0 || targetlane > 2)
             return;
         currentLane = targetlane;
-        verticalTargetPosition = new Vector3((currentLane - 1), 0, 0);
+        verticalTargetPosition = new Vector3((currentLane - 1), transform.position.y, 0);
+    }
+    void Submerge(int directionY)
+    {
+        if (!jumping)
+        {
+            cameraFollow.submerged = true;
+            int targetlaneY = currentlaneY + directionY;
+            if (targetlaneY < 0 || targetlaneY > 2)
+                return;
+            currentlaneY = targetlaneY;
+            verticalTargetPosition = new Vector3(transform.position.x, (currentlaneY - 2), 0);
+        }
     }
 
     void Jump()
@@ -185,21 +191,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    void Slide()
-    {
-        if (!jumping && !sliding)
-        {
 
-            slideStart = transform.position.z;
-            anim.SetFloat("JumpSpeed", speed / slideLength);
-            anim.SetBool("Sliding", true);
-            //Vector3 newSize = boxCollider.size;
-            //newSize.y = newSize.y / 2;
-            //boxCollider.size = newSize;
-            sliding = true;
-
-        }
-    }
      
     private void OnTriggerEnter(Collider other)
     {
