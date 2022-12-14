@@ -199,7 +199,7 @@ public class Player : MonoBehaviour
         {
             currentCoins++;
             uiManager.UpdateCoins(currentCoins);
-            other.gameObject.SetActive(false);
+            other.transform.parent.gameObject.SetActive(false);
         }
         if (invincible)
             return;
