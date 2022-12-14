@@ -17,6 +17,10 @@ public class Player : MonoBehaviour
     public float invincibleTime;
     public float multiplySpeed;
 
+
+    public float score; 
+    public int coins;
+
     private Animator anim;
     private Rigidbody rb;
     //private BoxCollider boxCollider;
@@ -33,8 +37,7 @@ public class Player : MonoBehaviour
     private bool invincible = false;
     private UiManager uiManager;
     private CameraFollow cameraFollow;
-    private int currentCoins;
-    private float score;
+
 
 
     // Start is called before the first frame update
@@ -48,6 +51,7 @@ public class Player : MonoBehaviour
         speed = minSpeed;
         uiManager = FindObjectOfType<UiManager>();
         cameraFollow = FindObjectOfType<CameraFollow>();
+        GameManager.gm.StartMissions();
     }
 
     // Update is called once per frame
@@ -197,8 +201,8 @@ public class Player : MonoBehaviour
     {
         if (other.CompareTag("Coin"))
         {
-            currentCoins++;
-            uiManager.UpdateCoins(currentCoins);
+            coins++;
+            uiManager.UpdateCoins(coins);
             other.transform.parent.gameObject.SetActive(false);
         }
         if (invincible)
