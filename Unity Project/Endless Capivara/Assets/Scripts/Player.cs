@@ -86,13 +86,23 @@ public class Player : MonoBehaviour
                 {
                     if(Mathf.Abs(diff.y) > Mathf.Abs(diff.x))
                     {
+                        
                         if(diff.y < 0)
                         {
-                            Submerge(-2);
-                            submerged = true;
+                            //DownKey
+                            if (jumping)
+                            {
+                                CancelJump();
+                            }
+                            else
+                            {
+                                Submerge(-2);
+                                submerged = true;
+                            }
                         }
                         else
                         {
+                            //UpKey
                             if (currentlaneY == 0)
                             {
                                 Submerge(2);
@@ -195,6 +205,17 @@ public class Player : MonoBehaviour
         }
     }
 
+    void CancelJump()
+    {
+        if (verticalTargetPosition.y > 0)
+        {
+            jumping = false;
+        }
+        else
+        {
+            return;
+        }
+    }
 
      
     private void OnTriggerEnter(Collider other)
