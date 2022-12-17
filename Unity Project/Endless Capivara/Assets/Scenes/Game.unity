@@ -924,7 +924,7 @@ Terrain:
   m_DrawTreesAndFoliage: 1
   m_StaticShadowCaster: 0
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
@@ -943,6 +943,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
+  - component: {fileID: 705507996}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -1027,6 +1028,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 46.3, y: 124.7, z: 0}
+--- !u!114 &705507996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705507993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &712583461
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,7 +1321,7 @@ Terrain:
   m_DrawTreesAndFoliage: 1
   m_StaticShadowCaster: 0
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
@@ -1320,6 +1341,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1398,9 +1420,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   submerged: 0
-  submergedCam: 0.5
+  submergedCam: 0.8
   notSubmergedCam: 3.5
   smothness: 6
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &992550336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1427,7 +1482,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992550336}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1490,6 +1545,8 @@ MonoBehaviour:
   model: {fileID: 4579636373062352716}
   invincibleTime: 2
   multiplySpeed: 1.2
+  score: 0
+  coins: 0
 --- !u!1 &1062492494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,15 +1607,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c19e7fc0a532445498d78109ca20f414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacles:
+  Obstacles:
   - {fileID: 1979332918920184969, guid: a99be1d88edbf9d4882c879561ea60b7, type: 3}
   - {fileID: 1627274445534624449, guid: 6eb9615188d48fa4788dd251b5236aed, type: 3}
   - {fileID: 1627274445534624449, guid: de6b7bd255a7bc641a48b58ff30a055f, type: 3}
   - {fileID: 1043556987926024859, guid: b969a54a2b3e2be4ea6e84329c4a7824, type: 3}
+  uwObstacles:
+  - {fileID: 2170453326277960925, guid: 1e4a0c1cd5e2f8543a29a7795ea819af, type: 3}
   numberOfObstacles: {x: 12, y: 17}
+  numberOfUWObstacles: {x: 5, y: 10}
   coin: {fileID: 9053949989179448658, guid: b699a7b725e7ddb48896ae4a8ef44ab8, type: 3}
   numberOfCoins: {x: 15, y: 25}
   newObstacles: []
+  newUWObstacles: []
   newCoins: []
 --- !u!1 &1345133741
 GameObject:
@@ -1776,15 +1837,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c19e7fc0a532445498d78109ca20f414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacles:
+  Obstacles:
+  - {fileID: 1979332918920184969, guid: a99be1d88edbf9d4882c879561ea60b7, type: 3}
+  - {fileID: 1627274445534624449, guid: 6eb9615188d48fa4788dd251b5236aed, type: 3}
   - {fileID: 1627274445534624449, guid: de6b7bd255a7bc641a48b58ff30a055f, type: 3}
   - {fileID: 1043556987926024859, guid: b969a54a2b3e2be4ea6e84329c4a7824, type: 3}
-  - {fileID: 1627274445534624449, guid: 6eb9615188d48fa4788dd251b5236aed, type: 3}
-  - {fileID: 1979332918920184969, guid: a99be1d88edbf9d4882c879561ea60b7, type: 3}
+  uwObstacles:
+  - {fileID: 2170453326277960925, guid: 1e4a0c1cd5e2f8543a29a7795ea819af, type: 3}
   numberOfObstacles: {x: 12, y: 17}
+  numberOfUWObstacles: {x: 8, y: 12}
   coin: {fileID: 9053949989179448658, guid: b699a7b725e7ddb48896ae4a8ef44ab8, type: 3}
   numberOfCoins: {x: 15, y: 25}
   newObstacles: []
+  newUWObstacles: []
   newCoins: []
 --- !u!1 &2002010229
 GameObject:

@@ -4,24 +4,36 @@ using UnityEngine;
 
 public class Track : MonoBehaviour
 {
-    public GameObject[] obstacles;
+    public GameObject[] Obstacles;
+    public GameObject[] uwObstacles;
     public Vector2 numberOfObstacles;
+    public Vector2 numberOfUWObstacles;
+
     public GameObject coin;
     public Vector2 numberOfCoins;
 
     public List<GameObject> newObstacles;
+    public List<GameObject> newUWObstacles;
     public List<GameObject> newCoins;
     // Start is called before the first frame update
     void Start()
     {
         int newNumberOfObstacles = (int)Random.Range(numberOfObstacles.x, numberOfObstacles.y);
+        int newNumberOfUWObstacles = (int)Random.Range(numberOfUWObstacles.x, numberOfUWObstacles.y);
         int newNumberOfCoins = (int)Random.Range(numberOfCoins.x, numberOfCoins.y);
 
-
+        //Over Water
         for (int i = 0; i < newNumberOfObstacles; i++)
         {
-            newObstacles.Add(Instantiate(obstacles[Random.Range(0, obstacles.Length)], transform));
+            newObstacles.Add(Instantiate(Obstacles[Random.Range(0, Obstacles.Length)], transform));
             newObstacles[i].SetActive(false);
+        }
+
+        //Under Water
+        for (int i = 0; i < newNumberOfUWObstacles; i++)
+        {
+            newUWObstacles.Add(Instantiate(uwObstacles[Random.Range(0, uwObstacles.Length)], transform));
+            newUWObstacles[i].SetActive(false);
         }
 
         for (int i = 0; i < newNumberOfCoins; i++)
@@ -32,6 +44,8 @@ public class Track : MonoBehaviour
 
         PositionateObstacles();
         PositionateCoins();
+        PositionateUWObstacles();
+
     }
 
     void PositionateObstacles()
@@ -45,6 +59,24 @@ public class Track : MonoBehaviour
 
             if (newObstacles[i].GetComponent<ChangeLane>() != null)
                 newObstacles[i].GetComponent<ChangeLane>().PositionLane();
+
+        }
+    }
+
+    void PositionateUWObstacles()
+    {
+        for (int i = 0; i < newUWObstacles.Count; i++)
+        {
+            float UWposZmin = (200f / newUWObstacles.Count) + (200f / newUWObstacles.Count) * i;
+            float UWposZmax = (200f / newUWObstacles.Count) + (200f / newUWObstacles.Count) * i + 1;
+            newUWObstacles[i].transform.localPosition = new Vector3(0, 0, Random.Range(UWposZmin, UWposZmax));
+            newUWObstacles[i].SetActive(true);
+
+            if (newUWObstacles[i].GetComponent<UnderWaterObject>() != null)
+                newUWObstacles[i].GetComponent<UnderWaterObject>().UWPosition();
+
+            if (newUWObstacles[i].GetComponent<ChangeLane>() != null)
+                newUWObstacles[i].GetComponent<ChangeLane>().PositionLane();
 
         }
     }
@@ -73,6 +105,7 @@ public class Track : MonoBehaviour
 
             PositionateObstacles();
             PositionateCoins();
+            PositionateUWObstacles();
         }
     }
 
