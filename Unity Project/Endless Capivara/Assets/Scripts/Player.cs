@@ -17,10 +17,14 @@ public class Player : MonoBehaviour
     public float invincibleTime;
     public float multiplySpeed;
 
+    public GameObject particleUW;
+    public GameObject particleRiver;
+
 
     public float score; 
     public int coins;
 
+    private float speedMemory;
     private Animator anim;
     private Rigidbody rb;
     //private BoxCollider boxCollider;
@@ -108,6 +112,7 @@ public class Player : MonoBehaviour
                                 Submerge(2);
                                 submerged = false;
                                 cameraFollow.submerged = false;
+                                
                             }
                             else
                             {
@@ -166,11 +171,31 @@ public class Player : MonoBehaviour
         Vector3 targetPosition = new Vector3(verticalTargetPosition.x, verticalTargetPosition.y, transform.position.z);
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, laneSpeed * Time.deltaTime);
 
+
+
     }
 
     private void FixedUpdate()
     {
         rb.velocity = Vector3.forward * speed;
+
+        if (rb.position.y > -0.5 && rb.position.y < 0.2)
+        {
+            particleRiver.SetActive(true);
+        }
+        else
+        {
+            particleRiver.SetActive(false);
+        }
+
+        if (rb.position.y <= 0.2)
+        {
+            particleUW.SetActive(true);
+        }
+        else
+        {
+            particleUW.SetActive(false);
+        }
     }
 
     void ChangeLane(int direction)
@@ -234,6 +259,7 @@ public class Player : MonoBehaviour
             currentLife--;
             uiManager.UpdateLive(currentLife);
             anim.SetTrigger("Hit");
+            speedMemory = speed;
             speed = 0;
             if (currentLife <= 0)
             {
@@ -260,7 +286,8 @@ public class Player : MonoBehaviour
         float blinkingPeriod = 0.1f;
         bool enabled = false;
         yield return new WaitForSeconds(1f);
-        speed = minSpeed;
+        //speed = ini
+        speed = speedMemory;
         while(timer < time && invincible)
         {
             model.SetActive(enabled);
