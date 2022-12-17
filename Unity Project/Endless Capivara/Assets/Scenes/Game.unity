@@ -1614,6 +1614,8 @@ MonoBehaviour:
   - {fileID: 1043556987926024859, guid: b969a54a2b3e2be4ea6e84329c4a7824, type: 3}
   uwObstacles:
   - {fileID: 2170453326277960925, guid: 1e4a0c1cd5e2f8543a29a7795ea819af, type: 3}
+  - {fileID: 5215164067716579773, guid: 14f2686408eaf5d4bb6a9b3514e3cf06, type: 3}
+  - {fileID: 5215164067716579773, guid: 14f2686408eaf5d4bb6a9b3514e3cf06, type: 3}
   numberOfObstacles: {x: 12, y: 17}
   numberOfUWObstacles: {x: 5, y: 10}
   coin: {fileID: 9053949989179448658, guid: b699a7b725e7ddb48896ae4a8ef44ab8, type: 3}
