@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public Animator anim;
+
     public float laneSpeed;
     public float speed;
     public float jumpLength;
@@ -25,7 +27,6 @@ public class Player : MonoBehaviour
     public int coins;
 
     private float speedMemory;
-    private Animator anim;
     private Rigidbody rb;
     //private BoxCollider boxCollider;
     private int currentLane = 1;
@@ -48,7 +49,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        anim = GetComponentInChildren<Animator>();
         //boxCollider = GetComponent<BoxCollider>();
         //boxColliderSize = boxCollider.size;
         currentLife = MaxLife;
@@ -88,12 +88,15 @@ public class Player : MonoBehaviour
                 diff = new Vector2(diff.x / Screen.width, diff.y / Screen.width);
                 if(diff.magnitude > 0.01f)
                 {
-                    if(Mathf.Abs(diff.y) > Mathf.Abs(diff.x))
+
+                    if (Mathf.Abs(diff.y) > Mathf.Abs(diff.x))
                     {
-                        
-                        if(diff.y < 0)
+                        anim.SetFloat("Touch Y", diff.y);
+
+                        //DownKey
+                        if (diff.y < 0)
                         {
-                            //DownKey
+
                             if (jumping)
                             {
                                 CancelJump();
@@ -102,11 +105,13 @@ public class Player : MonoBehaviour
                             {
                                 Submerge(-2);
                                 submerged = true;
+
                             }
                         }
                         else
+                        //UpKey
                         {
-                            //UpKey
+                            //if Submerged
                             if (currentlaneY == 0)
                             {
                                 Submerge(2);
@@ -116,12 +121,15 @@ public class Player : MonoBehaviour
                             }
                             else
                             {
-                                Jump();
+                            //Not Submerged
+                                Jump();;
                             }
                         }
                     }
                     else
                     {
+                        anim.SetFloat("Touch X", diff.x);
+
                         if (diff.x < 0)
                         {
                             ChangeLane(-1);
@@ -144,6 +152,8 @@ public class Player : MonoBehaviour
             else if (Input.GetTouch(0).phase == TouchPhase.Ended)
             {
                 isSwipping = false;
+                anim.SetFloat("Touch Y", 0);
+                anim.SetFloat("Touch X", 0);
             }
         }       
 
@@ -172,16 +182,18 @@ public class Player : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, laneSpeed * Time.deltaTime);
 
 
-
     }
 
     private void FixedUpdate()
     {
         rb.velocity = Vector3.forward * speed;
 
+        // Checagem de posição do Player no Grid
+
         if (rb.position.y > -0.5 && rb.position.y < 0.2)
         {
             particleRiver.SetActive(true);
+
         }
         else
         {
@@ -195,6 +207,35 @@ public class Player : MonoBehaviour
         else
         {
             particleUW.SetActive(false);
+            anim.SetBool("ToSurface", false);
+        }
+
+        if (rb.position.y <= -0.5)
+        {
+            anim.SetBool("ToSurface", true);
+        }
+        else
+        {
+            anim.SetBool("ToSurface", false);
+        }
+
+
+
+        if (rb.position.x < -0.5f)
+        {
+            anim.SetBool("ToL", false);
+        }
+        else
+        {
+            anim.SetBool("ToL", true);
+        }
+        if (rb.position.x > 0.5f)
+        {
+            anim.SetBool("ToR", false);
+        }
+        else
+        {
+            anim.SetBool("ToR", true);
         }
     }
 
@@ -235,10 +276,7 @@ public class Player : MonoBehaviour
         if (verticalTargetPosition.y > 0)
         {
             jumping = false;
-        }
-        else
-        {
-            return;
+            anim.SetBool("Jumping", false);
         }
     }
 
