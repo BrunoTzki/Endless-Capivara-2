@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Animator anim;
+    public SpriteRenderer playerSpriteRenderer;
 
     public float laneSpeed;
     public float speed;
@@ -213,10 +214,13 @@ public class Player : MonoBehaviour
         if (rb.position.y <= -0.5)
         {
             anim.SetBool("ToSurface", true);
+            playerSpriteRenderer.sortingOrder = -1;
         }
         else
         {
-            anim.SetBool("ToSurface", false);
+            anim.SetBool("ToSurface", false); 
+            playerSpriteRenderer.sortingOrder = 1;
+
         }
 
 
