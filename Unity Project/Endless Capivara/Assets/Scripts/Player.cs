@@ -92,8 +92,7 @@ public class Player : MonoBehaviour
 
                     if (Mathf.Abs(diff.y) > Mathf.Abs(diff.x))
                     {
-                        anim.SetFloat("Touch Y", diff.y);
-
+                            anim.SetFloat("Touch Y", diff.y);
                         //DownKey
                         if (diff.y < 0)
                         {
@@ -106,7 +105,6 @@ public class Player : MonoBehaviour
                             {
                                 Submerge(-2);
                                 submerged = true;
-
                             }
                         }
                         else
@@ -118,7 +116,6 @@ public class Player : MonoBehaviour
                                 Submerge(2);
                                 submerged = false;
                                 cameraFollow.submerged = false;
-                                
                             }
                             else
                             {
@@ -129,11 +126,13 @@ public class Player : MonoBehaviour
                     }
                     else
                     {
-                        anim.SetFloat("Touch X", diff.x);
+
+                            anim.SetFloat("Touch X", diff.x);
 
                         if (diff.x < 0)
                         {
                             ChangeLane(-1);
+
                         }
                         else
                         {
@@ -142,6 +141,7 @@ public class Player : MonoBehaviour
                     }
 
                     isSwipping = false;
+                    Invoke("StopAnim",0.05f);
                 }
             }
 
@@ -153,8 +153,7 @@ public class Player : MonoBehaviour
             else if (Input.GetTouch(0).phase == TouchPhase.Ended)
             {
                 isSwipping = false;
-                anim.SetFloat("Touch Y", 0);
-                anim.SetFloat("Touch X", 0);
+                StopAnim();
             }
         }       
 
@@ -183,6 +182,12 @@ public class Player : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, laneSpeed * Time.deltaTime);
 
 
+    }
+
+    void StopAnim()
+    {
+        anim.SetFloat("Touch Y", 0);
+        anim.SetFloat("Touch X", 0);
     }
 
     private void FixedUpdate()

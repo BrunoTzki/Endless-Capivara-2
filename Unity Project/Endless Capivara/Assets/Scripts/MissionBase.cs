@@ -15,6 +15,7 @@ public abstract class MissionBase : MonoBehaviour
     public int reward;
     public Player player;
     public int currentProgress;
+    public MissionType missionType;
 
     public abstract void Created();
     public abstract string GetMissionDescription();
@@ -39,9 +40,10 @@ public class SingleRun : MissionBase
 
     public override void Created()
     {
-        int[] maxValue = { 1000, 2000, 3000, 4000 };
+        missionType = MissionType.SingleRun;
+        int[] maxValue = { 1000, 2000, 3000 };
         int randomMaxValue = Random.Range(0, maxValue.Length);
-        int[] rewards = { 100, 200, 300, 400 };
+        int[] rewards = { 100, 200, 300 };
         reward = rewards[randomMaxValue];
         max = maxValue[randomMaxValue];
         progress = 0;
@@ -71,9 +73,10 @@ public class TotalMeter : MissionBase
 {
     public override void Created()
     {
-        int[] maxValue = { 10000, 20000, 30000, 40000 };
+        missionType = MissionType.TotalMeter;
+        int[] maxValue = { 10000, 20000, 30000};
         int randomMaxValue = Random.Range(0, maxValue.Length);
-        int[] rewards = { 1000, 2000, 3000, 4000 };
+        int[] rewards = { 1000, 2000, 3000};
         reward = rewards[randomMaxValue];
         max = maxValue[randomMaxValue];
         progress = 0;
@@ -102,9 +105,10 @@ public class CoinsSingleRun : MissionBase
 {
     public override void Created()
     {
-        int[] maxValue = { 100, 200, 300, 400, 500 };
+        missionType = MissionType.CoinsSingleRun;
+        int[] maxValue = { 100, 200, 300};
         int randomMaxValue = Random.Range(0, maxValue.Length);
-        int[] rewards = { 100, 200, 300, 400, 500 };
+        int[] rewards = { 100, 200, 300};
         reward = rewards[randomMaxValue];
         max = maxValue[randomMaxValue];
         progress = 0;

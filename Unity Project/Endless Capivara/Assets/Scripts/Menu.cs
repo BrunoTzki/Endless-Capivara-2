@@ -11,6 +11,7 @@ public class Menu : MonoBehaviour
     void Start()
     {
         SetMission();
+        GameManager.gm.Save();
     }
 
     // Update is called once per frame
@@ -25,7 +26,7 @@ public class Menu : MonoBehaviour
     }
     public void SetMission()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 2; i++)
         {
             MissionBase mission = GameManager.gm.GetMission(i);
             missionDescription[i].text = mission.GetMissionDescription();
