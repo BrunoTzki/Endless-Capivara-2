@@ -80,6 +80,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8593746455953402144}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &8336183875186071646
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8899806721435948145}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0062459228, y: 0.0059009446, z: 0.01078199}
+  m_Center: {x: 0.000090477624, y: -0.00028784992, z: 0.0009662825}
 --- !u!114 &152290619855178239
 MonoBehaviour:
   m_ObjectHideFlags: 0

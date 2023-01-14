@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7894316462497083146}
   - component: {fileID: 6494724382913929391}
   - component: {fileID: 9062669768963118181}
+  - component: {fileID: -8869941099164658783}
   m_Layer: 0
   m_Name: caixa 1
   m_TagString: Obstacle
@@ -25,14 +26,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7405587205501515184}
-  m_LocalRotation: {x: -0.79136294, y: 0.069356956, z: 0.60608846, w: -0.03988708}
+  m_LocalRotation: {x: 0, y: 0, z: 0.079328984, w: 0.9968485}
   m_LocalPosition: {x: -1.4838223, y: 0, z: -1.7012814}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -178.8, y: 74.8, z: 9.1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 9.1}
 --- !u!33 &6494724382913929391
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -88,3 +89,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-8869941099164658783
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7405587205501515184}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.010250795, y: 0.010250795, z: 0.0102507975}
+  m_Center: {x: -0.000009848501, y: -0.000012481816, z: -0.0000018102562}

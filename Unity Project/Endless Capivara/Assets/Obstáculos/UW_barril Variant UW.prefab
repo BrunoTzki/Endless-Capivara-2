@@ -30,37 +30,37 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 30b04716dfafa7a4fa7e81bb2faf3b41,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.15485427
+      value: 0.1980008
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30b04716dfafa7a4fa7e81bb2faf3b41,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.42283213
+      value: -0.24819712
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30b04716dfafa7a4fa7e81bb2faf3b41,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.6878877
+      value: -0.67905545
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30b04716dfafa7a4fa7e81bb2faf3b41,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.56924826
+      value: -0.6618743
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30b04716dfafa7a4fa7e81bb2faf3b41,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -113.92
+      value: -94.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30b04716dfafa7a4fa7e81bb2faf3b41,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -41.44
+      value: -52.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30b04716dfafa7a4fa7e81bb2faf3b41,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -89.2
+      value: -90.49
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 30b04716dfafa7a4fa7e81bb2faf3b41,
         type: 3}
@@ -80,6 +80,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8593746455953402144}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &-6170451070669301599
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8899806721435948145}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.007034172, y: 0.0064753657, z: 0.0107819885}
+  m_Center: {x: 0.0000031447537, y: -0.00030171752, z: 0.00096628256}
 --- !u!114 &-5813290740756650870
 MonoBehaviour:
   m_ObjectHideFlags: 0
