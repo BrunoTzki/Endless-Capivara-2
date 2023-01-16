@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public float laneSpeed;
     public float speed;
     public float jumpLength;
+    public float jumpLengthStart;
     public float jumpHeight;
     public float slideLength;
     public float slideHeight;
@@ -49,6 +50,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        jumpLength = jumpLengthStart * speed;
         rb = GetComponent<Rigidbody>();
         //boxCollider = GetComponent<BoxCollider>();
         //boxColliderSize = boxCollider.size;
@@ -62,6 +64,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         score += Time.deltaTime * speed;
         uiManager.UpdateScore((int)score);
         if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -361,6 +364,7 @@ public class Player : MonoBehaviour
     public void IncreaseSpeed()
     {
         speed *= multiplySpeed;
+        jumpLength = jumpLengthStart * speed;
         if (speed >= maxSpeed)
             speed = maxSpeed;
     }

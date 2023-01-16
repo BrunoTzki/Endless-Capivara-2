@@ -20475,11 +20475,12 @@ MonoBehaviour:
   playerSpriteRenderer: {fileID: 1030007066}
   laneSpeed: 8
   speed: 10
-  jumpLength: 8
+  jumpLength: 0.8
+  jumpLengthStart: 0.8
   jumpHeight: 3
   slideLength: 16
   slideHeight: -3
-  MaxLife: 3
+  MaxLife: 100
   minSpeed: 10
   maxSpeed: 20
   model: {fileID: 1030007064}
@@ -20741,6 +20742,7 @@ MonoBehaviour:
   - {fileID: 8899806721435948145, guid: b3408eb60a1981248ba05ca6fdfb5774, type: 3}
   numberOfObstacles: {x: 12, y: 17}
   numberOfUWObstacles: {x: 5, y: 10}
+  ObstacleHolder: {fileID: 1062492495}
   coin: {fileID: 9064987370366432040, guid: 199875b59dac0c743a38b4b4c07dcfbc, type: 3}
   numberOfCoins: {x: 15, y: 25}
   newObstacles: []
@@ -21001,6 +21003,11 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1d03c6d08d826c14d8b8c64a2247c55b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1d03c6d08d826c14d8b8c64a2247c55b,
+        type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1d03c6d08d826c14d8b8c64a2247c55b,
@@ -25986,6 +25993,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1d03c6d08d826c14d8b8c64a2247c55b,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1d03c6d08d826c14d8b8c64a2247c55b,
         type: 3}
       propertyPath: m_Name
@@ -26074,6 +26086,7 @@ MonoBehaviour:
   - {fileID: 8899806721435948145, guid: b3408eb60a1981248ba05ca6fdfb5774, type: 3}
   numberOfObstacles: {x: 12, y: 17}
   numberOfUWObstacles: {x: 8, y: 12}
+  ObstacleHolder: {fileID: 1948661636}
   coin: {fileID: 9064987370366432040, guid: 199875b59dac0c743a38b4b4c07dcfbc, type: 3}
   numberOfCoins: {x: 15, y: 25}
   newObstacles: []

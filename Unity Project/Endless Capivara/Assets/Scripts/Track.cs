@@ -8,6 +8,7 @@ public class Track : MonoBehaviour
     public GameObject[] uwObstacles;
     public Vector2 numberOfObstacles;
     public Vector2 numberOfUWObstacles;
+    public Transform ObstacleHolder;
 
     public GameObject coin;
     public Vector2 numberOfCoins;
@@ -84,17 +85,37 @@ public class Track : MonoBehaviour
     {
             float minZpos = 10f;
 
-            for (int i = 0; i < newCoins.Count; i++)
-            {
+        for (int i = 0; i < newCoins.Count; i++)
+        {
             float maxZpos = minZpos + 15f;
             float randomZpos = Random.Range(minZpos, maxZpos);
             newCoins[i].transform.localPosition = new Vector3(transform.position.x, transform.position.y, randomZpos);
             newCoins[i].SetActive(true);
             newCoins[i].GetComponent<ChangeLane>().PositionLane();
             minZpos = randomZpos + 1;
+            Collider[] colliders = Physics.OverlapSphere(transform.position, 1f);
+            foreach(Collider coll in colliders)
+            {
+                if (coll.transform.parent == ObstacleHolder.parent)
+                {
+                    Debug.Log("Sobrepôs");
+                }
+            }
         }
     }
-
+    void RepositionateCoins(int i, float minZpos)
+    {
+        float maxZpos = minZpos + 15f;
+        float randomZpos = Random.Range(minZpos, maxZpos);
+        newCoins[i].transform.localPosition = new Vector3(transform.position.x, transform.position.y, randomZpos);
+        newCoins[i].GetComponent<ChangeLane>().PositionLane();
+        minZpos = randomZpos + 1;
+        //   if ()
+        //    {
+        //        RepositionateCoins(i, minZpos);
+        //    }
+        //}
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
