@@ -20740,7 +20740,7 @@ MonoBehaviour:
   - {fileID: 5215164067716579773, guid: 14f2686408eaf5d4bb6a9b3514e3cf06, type: 3}
   - {fileID: 5823213826138541096, guid: 7eadf5ec9e17eef469bd45ddfae106fb, type: 3}
   - {fileID: 8899806721435948145, guid: b3408eb60a1981248ba05ca6fdfb5774, type: 3}
-  numberOfObstacles: {x: 12, y: 17}
+  numberOfObstacles: {x: 8, y: 12}
   numberOfUWObstacles: {x: 5, y: 10}
   ObstacleHolder: {fileID: 1062492495}
   coin: {fileID: 9064987370366432040, guid: 199875b59dac0c743a38b4b4c07dcfbc, type: 3}

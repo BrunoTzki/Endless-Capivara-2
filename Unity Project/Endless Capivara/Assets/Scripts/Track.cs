@@ -93,14 +93,6 @@ public class Track : MonoBehaviour
             newCoins[i].SetActive(true);
             newCoins[i].GetComponent<ChangeLane>().PositionLane();
             minZpos = randomZpos + 1;
-            Collider[] colliders = Physics.OverlapSphere(transform.position, 1f);
-            foreach(Collider coll in colliders)
-            {
-                if (coll.transform.parent == ObstacleHolder.parent)
-                {
-                    Debug.Log("Sobrepôs");
-                }
-            }
         }
     }
     void RepositionateCoins(int i, float minZpos)

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{acbdc80a-c684-472e-8508-3a748d85bd19}">
+		<property name="name">
+			<value>Afundar</value>
+		</property>
+		<relationship name="folder">
+			<destination>{75ff9506-37e2-4022-b016-9987f6d05a56}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{7afa54f1-a1e1-4385-ab24-b80205cff71f}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{7afa54f1-a1e1-4385-ab24-b80205cff71f}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

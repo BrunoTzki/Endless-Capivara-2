@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{ae381f38-632e-44e4-810f-eebc4712505f}">
+		<property name="name">
+			<value>Coletar em Sequência</value>
+		</property>
+		<relationship name="folder">
+			<destination>{75ff9506-37e2-4022-b016-9987f6d05a56}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{5c7290d6-5de1-4d99-a575-5ea086609704}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{5c7290d6-5de1-4d99-a575-5ea086609704}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
