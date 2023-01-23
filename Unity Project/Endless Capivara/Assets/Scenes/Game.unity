@@ -22247,6 +22247,7 @@ MonoBehaviour:
   particleRiver: {fileID: 1397091345}
   score: 0
   coins: 0
+  currentLife: 0
 --- !u!212 &992550341
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22883,13 +22884,16 @@ MonoBehaviour:
   - {fileID: 5823213826138541096, guid: 7eadf5ec9e17eef469bd45ddfae106fb, type: 3}
   - {fileID: 8899806721435948145, guid: b3408eb60a1981248ba05ca6fdfb5774, type: 3}
   numberOfObstacles: {x: 8, y: 12}
-  numberOfUWObstacles: {x: 5, y: 10}
-  ObstacleHolder: {fileID: 1062492495}
+  numberOfUWObstacles: {x: 8, y: 12}
   coin: {fileID: 9064987370366432040, guid: 199875b59dac0c743a38b4b4c07dcfbc, type: 3}
   numberOfCoins: {x: 15, y: 25}
+  specials:
+  - {fileID: 8602972131673887348, guid: 5f030bb9eea354c4cb3c105ae93659c5, type: 3}
+  numberOfSpecials: {x: 1, y: 3}
   newObstacles: []
   newUWObstacles: []
   newCoins: []
+  newSpecials: []
 --- !u!1 &1094369817
 GameObject:
   m_ObjectHideFlags: 0
@@ -30120,14 +30124,18 @@ MonoBehaviour:
   - {fileID: 5215164067716579773, guid: 14f2686408eaf5d4bb6a9b3514e3cf06, type: 3}
   - {fileID: 5823213826138541096, guid: 7eadf5ec9e17eef469bd45ddfae106fb, type: 3}
   - {fileID: 8899806721435948145, guid: b3408eb60a1981248ba05ca6fdfb5774, type: 3}
-  numberOfObstacles: {x: 12, y: 17}
+  numberOfObstacles: {x: 8, y: 12}
   numberOfUWObstacles: {x: 8, y: 12}
-  ObstacleHolder: {fileID: 1948661636}
   coin: {fileID: 9064987370366432040, guid: 199875b59dac0c743a38b4b4c07dcfbc, type: 3}
   numberOfCoins: {x: 15, y: 25}
+  specials:
+  - {fileID: 8602972131673887348, guid: 5f030bb9eea354c4cb3c105ae93659c5, type: 3}
+  - {fileID: 8329711160071861957, guid: 814abe594ece7b04193d4b00d49f164a, type: 3}
+  numberOfSpecials: {x: 1, y: 3}
   newObstacles: []
   newUWObstacles: []
   newCoins: []
+  newSpecials: []
 --- !u!1 &1969792146
 GameObject:
   m_ObjectHideFlags: 0

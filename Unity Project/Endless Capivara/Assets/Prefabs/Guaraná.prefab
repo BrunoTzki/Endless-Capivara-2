@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5227660850418646481
+--- !u!1 &3634004363972877068
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4884067432712054635}
-  - component: {fileID: 8388071821782821070}
-  - component: {fileID: 6020360149682936836}
-  - component: {fileID: 8277420136338390097}
+  - component: {fileID: 4117771219697320374}
+  - component: {fileID: 1047817602298924563}
+  - component: {fileID: 2985446504228797145}
+  - component: {fileID: 7517083905430066240}
   m_Layer: 0
-  m_Name: Acai Model
-  m_TagString: Coin
+  m_Name: Guarana Model
+  m_TagString: Guarana
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4884067432712054635
+--- !u!4 &4117771219697320374
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5227660850418646481}
-  m_LocalRotation: {x: -0.7069834, y: -0, z: -0, w: 0.7072302}
+  m_GameObject: {fileID: 3634004363972877068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 150, y: 150, z: 150}
+  m_LocalScale: {x: 250, y: 250, z: 250}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 676291888586113438}
+  m_Father: {fileID: 1733071526911261517}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
---- !u!33 &8388071821782821070
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1047817602298924563
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5227660850418646481}
-  m_Mesh: {fileID: -1355057146850090981, guid: 644f16b98ee718a448d0648d2fa0fbe4, type: 3}
---- !u!23 &6020360149682936836
+  m_GameObject: {fileID: 3634004363972877068}
+  m_Mesh: {fileID: 991594948621976833, guid: 60b7e788b9be9914fb2170b6d035464a, type: 3}
+--- !u!23 &2985446504228797145
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5227660850418646481}
+  m_GameObject: {fileID: 3634004363972877068}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,8 +62,10 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2813467912831258332, guid: 644f16b98ee718a448d0648d2fa0fbe4, type: 3}
-  - {fileID: -8274133419916619345, guid: 644f16b98ee718a448d0648d2fa0fbe4, type: 3}
+  - {fileID: 9185737683893222716, guid: 60b7e788b9be9914fb2170b6d035464a, type: 3}
+  - {fileID: -8274133419916619345, guid: 60b7e788b9be9914fb2170b6d035464a, type: 3}
+  - {fileID: -3522955778539423533, guid: 60b7e788b9be9914fb2170b6d035464a, type: 3}
+  - {fileID: -6087771358165109452, guid: 60b7e788b9be9914fb2170b6d035464a, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,17 +87,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &8277420136338390097
+--- !u!95 &7517083905430066240
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5227660850418646481}
+  m_GameObject: {fileID: 3634004363972877068}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e6906ebedd8ebb94199ee5179d6a7517, type: 2}
+  m_Controller: {fileID: 9100000, guid: 797846591d907db4382240bd294db006, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -105,7 +107,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &6325520340605616659
+--- !u!1 &5697787591992504302
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,57 +115,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5228803074570910403}
-  - component: {fileID: 5700180789023504837}
-  - component: {fileID: 8690101404438338810}
+  - component: {fileID: 2178453387709600492}
+  - component: {fileID: 4673145576608317937}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Coin
+  m_TagString: Guarana
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5228803074570910403
+--- !u!4 &2178453387709600492
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6325520340605616659}
-  m_LocalRotation: {x: 0.0001746416, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 5697787591992504302}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75000006, y: 0.7500002, z: 0.7500002}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 676291888586113438}
+  m_Father: {fileID: 1733071526911261517}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &5700180789023504837
+--- !u!135 &4673145576608317937
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6325520340605616659}
+  m_GameObject: {fileID: 5697787591992504302}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.3834266
-  m_Center: {x: 0, y: -0.11657342, z: 0}
---- !u!114 &8690101404438338810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6325520340605616659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d460a16e4d2a11f4780546d614ef4f82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &9064987370366432040
+  m_Radius: 0.23266058
+  m_Center: {x: 0.05666162, y: 0.002216354, z: -0.025080457}
+--- !u!1 &8329711160071861957
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,62 +160,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 676291888586113438}
-  - component: {fileID: 3737339807360096992}
-  - component: {fileID: 3640938286297283191}
+  - component: {fileID: 1733071526911261517}
+  - component: {fileID: 4576077168224150323}
   m_Layer: 0
-  m_Name: Acai Coin
-  m_TagString: Coin
+  m_Name: "Guaran\xE1"
+  m_TagString: Guarana
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &676291888586113438
+--- !u!4 &1733071526911261517
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9064987370366432040}
+  m_GameObject: {fileID: 8329711160071861957}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4884067432712054635}
-  - {fileID: 5228803074570910403}
+  - {fileID: 4117771219697320374}
+  - {fileID: 2178453387709600492}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3737339807360096992
+--- !u!114 &4576077168224150323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9064987370366432040}
+  m_GameObject: {fileID: 8329711160071861957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87933a947b98cc740959c5ab19139830, type: 3}
+  m_Script: {fileID: 11500000, guid: 13d1d547b92553e4885b57da89cffd19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &3640938286297283191
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9064987370366432040}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

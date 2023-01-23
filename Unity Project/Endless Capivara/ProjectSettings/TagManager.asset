@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Obstacle
   - Coin
+  - Guarana
+  - Carambola
   layers:
   - Default
   - TransparentFX

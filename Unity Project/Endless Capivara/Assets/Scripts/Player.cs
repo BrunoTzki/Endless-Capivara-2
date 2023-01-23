@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     //private Vector3 boxColliderSize;
     private bool isSwipping = false;
     private Vector2 startingTouch;
-    private int currentLife;
+    public int currentLife;
     private bool invincible = false;
     private UiManager uiManager;
     private CameraFollow cameraFollow;
@@ -324,6 +324,16 @@ public class Player : MonoBehaviour
             {
                 StartCoroutine(Blinking(invincibleTime));
             }
+        }
+
+        if (other.CompareTag("Carambola"))
+        {
+            if (currentLife < 3) 
+            {
+                currentLife++;
+                uiManager.UpdateLive(currentLife);
+            }
+            other.transform.parent.gameObject.SetActive(false);
         }
     }
 
