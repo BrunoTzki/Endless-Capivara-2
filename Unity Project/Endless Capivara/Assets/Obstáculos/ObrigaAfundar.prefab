@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 5013288559844354028}
   - component: {fileID: 8971670661792832682}
   - component: {fileID: 436559587955563915}
-  - component: {fileID: 3001023253990149869}
   m_Layer: 0
   m_Name: Corrido 2
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,20 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &3001023253990149869
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1246214662946971997}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.0064322506
-  m_Height: 0.042576294
-  m_Direction: 0
-  m_Center: {x: -0.0006231613, y: 0.0002092594, z: 0.00043349087}
 --- !u!1 &1914670280412414493
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +97,7 @@ GameObject:
   - component: {fileID: 1286225011761911975}
   - component: {fileID: 2771487558390355714}
   - component: {fileID: 113357492537615304}
-  - component: {fileID: 6441779636816452199}
+  - component: {fileID: 158465731471879587}
   m_Layer: 0
   m_Name: ObrigaAfundar
   m_TagString: Obstacle
@@ -190,8 +175,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6441779636816452199
-CapsuleCollider:
+--- !u!65 &158465731471879587
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -200,10 +185,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.0064322506
-  m_Height: 0.042576294
-  m_Direction: 0
-  m_Center: {x: -0.0006231613, y: 0.0002092594, z: 0.00043349087}
+  serializedVersion: 2
+  m_Size: {x: 0.04294499, y: 0.05358304, z: 0.020448297}
+  m_Center: {x: -0.00012507821, y: -0.0008314252, z: 0.0013216877}
 --- !u!1 &2812796021744485656
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,10 +199,9 @@ GameObject:
   - component: {fileID: 5539163912209929837}
   - component: {fileID: 1473054947550973624}
   - component: {fileID: 2811022625102984284}
-  - component: {fileID: 4506893641520199428}
   m_Layer: 0
   m_Name: Corrido 2 (1)
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -291,17 +274,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4506893641520199428
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2812796021744485656}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.0064322506
-  m_Height: 0.042576294
-  m_Direction: 0
-  m_Center: {x: -0.0006231613, y: 0.0002092594, z: 0.00043349087}

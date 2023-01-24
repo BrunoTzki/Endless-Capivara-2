@@ -22869,6 +22869,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c19e7fc0a532445498d78109ca20f414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceMinima: 0.4
+  maxTries: 50
   Obstacles:
   - {fileID: 8899806721435948145, guid: fc3827efd9728ef4f9b2301ff5190628, type: 3}
   - {fileID: 8899806721435948145, guid: cf929c74561fcdc45a350dad98964518, type: 3}
@@ -22877,16 +22879,16 @@ MonoBehaviour:
   - {fileID: 7405587205501515184, guid: 9c977044e69943d429606b41d17ffda1, type: 3}
   - {fileID: 1979332918920184969, guid: a99be1d88edbf9d4882c879561ea60b7, type: 3}
   - {fileID: 1914670280412414493, guid: cfa0040eb8a59bf4aa7725c9d1320be8, type: 3}
-  - {fileID: 1914670280412414493, guid: beba2d716d762b549a8c11d2c800268d, type: 3}
   - {fileID: 1914670280412414493, guid: 477a5ac01a17df7499052f73668b5151, type: 3}
+  - {fileID: 1393387499143404425, guid: 00b0f162dcfd1604881378caebe78cbc, type: 3}
   uwObstacles:
   - {fileID: 5215164067716579773, guid: 14f2686408eaf5d4bb6a9b3514e3cf06, type: 3}
   - {fileID: 5823213826138541096, guid: 7eadf5ec9e17eef469bd45ddfae106fb, type: 3}
   - {fileID: 8899806721435948145, guid: b3408eb60a1981248ba05ca6fdfb5774, type: 3}
-  numberOfObstacles: {x: 8, y: 12}
+  numberOfObstacles: {x: 11, y: 15}
   numberOfUWObstacles: {x: 8, y: 12}
   coin: {fileID: 9064987370366432040, guid: 199875b59dac0c743a38b4b4c07dcfbc, type: 3}
-  numberOfCoins: {x: 15, y: 25}
+  numberOfCoins: {x: 40, y: 60}
   specials:
   - {fileID: 8602972131673887348, guid: 5f030bb9eea354c4cb3c105ae93659c5, type: 3}
   numberOfSpecials: {x: 1, y: 3}
@@ -30110,6 +30112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c19e7fc0a532445498d78109ca20f414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceMinima: 0.4
+  maxTries: 50
   Obstacles:
   - {fileID: 8899806721435948145, guid: fc3827efd9728ef4f9b2301ff5190628, type: 3}
   - {fileID: 8899806721435948145, guid: cf929c74561fcdc45a350dad98964518, type: 3}
@@ -30118,16 +30122,16 @@ MonoBehaviour:
   - {fileID: 7405587205501515184, guid: 9c977044e69943d429606b41d17ffda1, type: 3}
   - {fileID: 1979332918920184969, guid: a99be1d88edbf9d4882c879561ea60b7, type: 3}
   - {fileID: 1914670280412414493, guid: cfa0040eb8a59bf4aa7725c9d1320be8, type: 3}
-  - {fileID: 1914670280412414493, guid: beba2d716d762b549a8c11d2c800268d, type: 3}
   - {fileID: 1914670280412414493, guid: 477a5ac01a17df7499052f73668b5151, type: 3}
+  - {fileID: 1393387499143404425, guid: 00b0f162dcfd1604881378caebe78cbc, type: 3}
   uwObstacles:
   - {fileID: 5215164067716579773, guid: 14f2686408eaf5d4bb6a9b3514e3cf06, type: 3}
   - {fileID: 5823213826138541096, guid: 7eadf5ec9e17eef469bd45ddfae106fb, type: 3}
   - {fileID: 8899806721435948145, guid: b3408eb60a1981248ba05ca6fdfb5774, type: 3}
-  numberOfObstacles: {x: 8, y: 12}
+  numberOfObstacles: {x: 11, y: 15}
   numberOfUWObstacles: {x: 8, y: 12}
   coin: {fileID: 9064987370366432040, guid: 199875b59dac0c743a38b4b4c07dcfbc, type: 3}
-  numberOfCoins: {x: 15, y: 25}
+  numberOfCoins: {x: 40, y: 60}
   specials:
   - {fileID: 8602972131673887348, guid: 5f030bb9eea354c4cb3c105ae93659c5, type: 3}
   - {fileID: 8329711160071861957, guid: 814abe594ece7b04193d4b00d49f164a, type: 3}

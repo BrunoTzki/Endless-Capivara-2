@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Track : MonoBehaviour
 {
+    public float distanceMinima;
+    public int maxTries;
     public GameObject[] Obstacles;
     public GameObject[] uwObstacles;
     public Vector2 numberOfObstacles;
@@ -30,10 +32,25 @@ public class Track : MonoBehaviour
         int newNumberOfSpecials = (int)Random.Range(numberOfSpecials.x, numberOfSpecials.y);
 
         //Over Water
+        int countObstacle1 = 0;
         for (int i = 0; i < newNumberOfObstacles; i++)
         {
-            newObstacles.Add(Instantiate(Obstacles[Random.Range(0, Obstacles.Length)], transform));
-            newObstacles[i].SetActive(false);
+            GameObject obstacle = Obstacles[Random.Range(0, Obstacles.Length)];
+            if (obstacle.name == "3troncos" && countObstacle1 <= 1)
+            {
+                newObstacles.Add(Instantiate(obstacle, transform));
+                newObstacles[i].SetActive(false);
+                countObstacle1++;
+            }
+            else if (obstacle.name == "3troncos" && countObstacle1 > 1)
+            {
+                i--; //decrementa i para não contar como objeto instanciado
+            }
+            else
+            {
+                newObstacles.Add(Instantiate(obstacle, transform));
+                newObstacles[i].SetActive(false);
+            }
         }
 
         //Under Water
@@ -66,8 +83,8 @@ public class Track : MonoBehaviour
     {
         for (int i = 0; i < newObstacles.Count; i++)
         {
-            float posZmin = (160f / newObstacles.Count) + (160f / newObstacles.Count) * i;
-            float posZmax = (160f / newObstacles.Count) + (160f / newObstacles.Count) * i + 1;
+            float posZmin = (200f / newObstacles.Count) + (200f / newObstacles.Count) * i;
+            float posZmax = (200f / newObstacles.Count) + (200f / newObstacles.Count) * i + 1;
             newObstacles[i].transform.localPosition = new Vector3(0, 0, Random.Range(posZmin, posZmax));
             newObstacles[i].SetActive(true);
 
@@ -80,8 +97,8 @@ public class Track : MonoBehaviour
     {
         for (int i = 0; i < newUWObstacles.Count; i++)
         {
-            float UWposZmin = (160f / newUWObstacles.Count) + (160f / newUWObstacles.Count) * i;
-            float UWposZmax = (160f / newUWObstacles.Count) + (160f / newUWObstacles.Count) * i + 1;
+            float UWposZmin = (200f / newUWObstacles.Count) + (200f / newUWObstacles.Count) * i;
+            float UWposZmax = (200f / newUWObstacles.Count) + (200f / newUWObstacles.Count) * i + 1;
             newUWObstacles[i].transform.localPosition = new Vector3(0, 0, Random.Range(UWposZmin, UWposZmax));
             newUWObstacles[i].SetActive(true);
 
@@ -96,30 +113,43 @@ public class Track : MonoBehaviour
 
     void PositionateCoins()
     {
-            float minZpos = 13f;
+        float minZpos = 13f;
 
         for (int i = 0; i < newCoins.Count; i++)
         {
+            int randomLane = Random.Range(-1, 2);
+            int randomLaneY = Random.Range(-1, 1);
             float maxZpos = minZpos + 13f;
             float randomZpos = Random.Range(minZpos, maxZpos);
-            newCoins[i].transform.localPosition = new Vector3(transform.position.x, transform.position.y, randomZpos);
-            newCoins[i].SetActive(true);
-            newCoins[i].GetComponent<ChangeLane>().PositionLane();
+            Vector3 newPos = new Vector3(randomLane, randomLaneY*2.2f, randomZpos);
+            Collider[] colliders;
+            int cont = 0;
+            do
+            {
+                colliders = Physics.OverlapSphere(newPos, distanceMinima);
+                if (colliders.Length > 0)
+                {
+                    Debug.Log("Colidiu");
+                    randomLane = Random.Range(-1, 2);
+                    randomLaneY = Random.Range(-1, 1);
+                    newPos = new Vector3(randomLane, randomLaneY*2.2f, randomZpos);
+                    newCoins[i].transform.localPosition = newPos;
+                    cont++;
+                    Debug.Log("Mudou de posição x" + cont);
+
+                }
+            } while (colliders.Length > 0 && cont <= maxTries);
+
+            if (cont > maxTries)
+            {
+                Debug.Log("Desistiu de procurar um novo lugar");
+                continue;
+                // aqui você pode tratar o caso de não conseguir gerar uma posição válida
+            }
+            newCoins[i].transform.localPosition = newPos;
             minZpos = randomZpos + 1;
+            newCoins[i].SetActive(true);
         }
-    }
-    void RepositionateCoins(int i, float minZpos)
-    {
-        float maxZpos = minZpos + 15f;
-        float randomZpos = Random.Range(minZpos, maxZpos);
-        newCoins[i].transform.localPosition = new Vector3(transform.position.x, transform.position.y, randomZpos);
-        newCoins[i].GetComponent<ChangeLane>().PositionLane();
-        minZpos = randomZpos + 1;
-        //   if ()
-        //    {
-        //        RepositionateCoins(i, minZpos);
-        //    }
-        //}
     }
     void PositionateSpecials()
     {
