@@ -36,13 +36,13 @@ public class Track : MonoBehaviour
         for (int i = 0; i < newNumberOfObstacles; i++)
         {
             GameObject obstacle = Obstacles[Random.Range(0, Obstacles.Length)];
-            if (obstacle.name == "3troncos" && countObstacle1 <= 1)
+            if (obstacle.name == "3troncos" && countObstacle1 < 1)
             {
                 newObstacles.Add(Instantiate(obstacle, transform));
                 newObstacles[i].SetActive(false);
                 countObstacle1++;
             }
-            else if (obstacle.name == "3troncos" && countObstacle1 > 1)
+            else if (obstacle.name == "3troncos" && countObstacle1 >= 1)
             {
                 i--; //decrementa i para não contar como objeto instanciado
             }
@@ -83,8 +83,8 @@ public class Track : MonoBehaviour
     {
         for (int i = 0; i < newObstacles.Count; i++)
         {
-            float posZmin = (200f / newObstacles.Count) + (200f / newObstacles.Count) * i;
-            float posZmax = (200f / newObstacles.Count) + (200f / newObstacles.Count) * i + 1;
+            float posZmin = (190f / newObstacles.Count) + (190f / newObstacles.Count) * i;
+            float posZmax = (190f / newObstacles.Count) + (190f / newObstacles.Count) * i + 1;
             newObstacles[i].transform.localPosition = new Vector3(0, 0, Random.Range(posZmin, posZmax));
             newObstacles[i].SetActive(true);
 
@@ -97,8 +97,8 @@ public class Track : MonoBehaviour
     {
         for (int i = 0; i < newUWObstacles.Count; i++)
         {
-            float UWposZmin = (200f / newUWObstacles.Count) + (200f / newUWObstacles.Count) * i;
-            float UWposZmax = (200f / newUWObstacles.Count) + (200f / newUWObstacles.Count) * i + 1;
+            float UWposZmin = (190f / newUWObstacles.Count) + (190f / newUWObstacles.Count) * i;
+            float UWposZmax = (190f / newUWObstacles.Count) + (190f / newUWObstacles.Count) * i + 1;
             newUWObstacles[i].transform.localPosition = new Vector3(0, 0, Random.Range(UWposZmin, UWposZmax));
             newUWObstacles[i].SetActive(true);
 
@@ -113,13 +113,13 @@ public class Track : MonoBehaviour
 
     void PositionateCoins()
     {
-        float minZpos = 13f;
+        float minZpos = 10f;
 
         for (int i = 0; i < newCoins.Count; i++)
         {
             int randomLane = Random.Range(-1, 2);
             int randomLaneY = Random.Range(-1, 1);
-            float maxZpos = minZpos + 13f;
+            float maxZpos = minZpos + 10f;
             float randomZpos = Random.Range(minZpos, maxZpos);
             Vector3 newPos = new Vector3(randomLane, randomLaneY*2.2f, randomZpos);
             Collider[] colliders;

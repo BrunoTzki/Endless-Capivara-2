@@ -22856,7 +22856,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10, y: 10, z: 2}
-  m_Center: {x: 0, y: 0, z: 220}
+  m_Center: {x: 0, y: 0, z: 200}
 --- !u!114 &1062492498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22869,8 +22869,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c19e7fc0a532445498d78109ca20f414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceMinima: 0.4
-  maxTries: 50
+  distanceMinima: 0.5
+  maxTries: 100
   Obstacles:
   - {fileID: 8899806721435948145, guid: fc3827efd9728ef4f9b2301ff5190628, type: 3}
   - {fileID: 8899806721435948145, guid: cf929c74561fcdc45a350dad98964518, type: 3}
@@ -22888,7 +22888,7 @@ MonoBehaviour:
   numberOfObstacles: {x: 11, y: 15}
   numberOfUWObstacles: {x: 8, y: 12}
   coin: {fileID: 9064987370366432040, guid: 199875b59dac0c743a38b4b4c07dcfbc, type: 3}
-  numberOfCoins: {x: 40, y: 60}
+  numberOfCoins: {x: 25, y: 30}
   specials:
   - {fileID: 8602972131673887348, guid: 5f030bb9eea354c4cb3c105ae93659c5, type: 3}
   numberOfSpecials: {x: 1, y: 3}
@@ -30032,7 +30032,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10, y: 10, z: 2}
-  m_Center: {x: 0, y: 0, z: 220}
+  m_Center: {x: 0, y: 0, z: 200}
 --- !u!4 &1948661636
 Transform:
   m_ObjectHideFlags: 0
@@ -30112,8 +30112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c19e7fc0a532445498d78109ca20f414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceMinima: 0.4
-  maxTries: 50
+  distanceMinima: 0.5
+  maxTries: 100
   Obstacles:
   - {fileID: 8899806721435948145, guid: fc3827efd9728ef4f9b2301ff5190628, type: 3}
   - {fileID: 8899806721435948145, guid: cf929c74561fcdc45a350dad98964518, type: 3}
@@ -30131,7 +30131,7 @@ MonoBehaviour:
   numberOfObstacles: {x: 11, y: 15}
   numberOfUWObstacles: {x: 8, y: 12}
   coin: {fileID: 9064987370366432040, guid: 199875b59dac0c743a38b4b4c07dcfbc, type: 3}
-  numberOfCoins: {x: 40, y: 60}
+  numberOfCoins: {x: 25, y: 30}
   specials:
   - {fileID: 8602972131673887348, guid: 5f030bb9eea354c4cb3c105ae93659c5, type: 3}
   - {fileID: 8329711160071861957, guid: 814abe594ece7b04193d4b00d49f164a, type: 3}
