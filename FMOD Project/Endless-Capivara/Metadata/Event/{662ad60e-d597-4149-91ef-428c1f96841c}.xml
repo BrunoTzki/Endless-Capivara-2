@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{662ad60e-d597-4149-91ef-428c1f96841c}">
+		<property name="color">
+			<value>Blue</value>
+		</property>
 		<property name="name">
-			<value>Música do Menu</value>
+			<value>Música do Menu (não fazer)</value>
 		</property>
 		<property name="outputFormat">
 			<value>0</value>
