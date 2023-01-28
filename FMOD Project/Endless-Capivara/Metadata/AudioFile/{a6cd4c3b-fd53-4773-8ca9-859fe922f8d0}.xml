@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{a6cd4c3b-fd53-4773-8ca9-859fe922f8d0}">
+		<property name="assetPath">
+			<value>acai_coin.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.36443750000000003</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6e3a3649-2071-438a-9f8d-b434b60ccda2}</destination>
+		</relationship>
+	</object>
+</objects>

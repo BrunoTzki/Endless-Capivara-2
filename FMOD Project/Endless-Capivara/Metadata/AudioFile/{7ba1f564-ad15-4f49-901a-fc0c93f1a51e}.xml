@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{7ba1f564-ad15-4f49-901a-fc0c93f1a51e}">
+		<property name="assetPath">
+			<value>queda.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>1.5536041666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6e3a3649-2071-438a-9f8d-b434b60ccda2}</destination>
+		</relationship>
+	</object>
+</objects>
