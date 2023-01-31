@@ -55,10 +55,11 @@ public class Player : MonoBehaviour
         //boxCollider = GetComponent<BoxCollider>();
         //boxColliderSize = boxCollider.size;
         currentLife = MaxLife;
-        speed = minSpeed;
         uiManager = FindObjectOfType<UiManager>();
         cameraFollow = FindObjectOfType<CameraFollow>();
         GameManager.gm.StartMissions();
+
+        Invoke("StartRun", 30f);
     }
 
     // Update is called once per frame
@@ -251,6 +252,12 @@ public class Player : MonoBehaviour
         }
     }
 
+    void StartRun()
+    {
+        //anim.SetBool("RunStart", true);
+        //speed = minSpeed;
+    }
+
     void ChangeLane(int direction)
     {
         int targetlane = currentLane + direction;
@@ -292,7 +299,6 @@ public class Player : MonoBehaviour
         }
     }
 
-     
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Coin"))
