@@ -45,11 +45,12 @@ public class Player : MonoBehaviour
     private UiManager uiManager;
     private CameraFollow cameraFollow;
 
-
+    private bool canMove;
 
     // Start is called before the first frame update
     void Start()
     {
+        canMove = false;
         jumpLength = jumpLengthStart * speed;
         rb = GetComponent<Rigidbody>();
         //boxCollider = GetComponent<BoxCollider>();
@@ -59,12 +60,14 @@ public class Player : MonoBehaviour
         cameraFollow = FindObjectOfType<CameraFollow>();
         GameManager.gm.StartMissions();
 
-        Invoke("StartRun", 30f);
+        Invoke("StartRun", 3f);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!canMove)
+            return;
 
         score += Time.deltaTime * speed;
         uiManager.UpdateScore((int)score);
@@ -254,8 +257,10 @@ public class Player : MonoBehaviour
 
     void StartRun()
     {
-        //anim.SetBool("RunStart", true);
-        //speed = minSpeed;
+        anim.SetBool("RunStart", true);
+        speed = minSpeed;
+        jumpLength = jumpLengthStart * speed;
+        canMove = true;
     }
 
     void ChangeLane(int direction)
@@ -312,6 +317,7 @@ public class Player : MonoBehaviour
 
         if(other.CompareTag("Obstacle"))
         {
+            canMove = false;
             currentLife--;
             uiManager.UpdateLive(currentLife);
             anim.SetTrigger("Hit");
@@ -354,9 +360,11 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(1f);
         //speed = ini
         speed = speedMemory;
-        while(timer < time && invincible)
+        canMove = true;
+        while (timer < time && invincible)
         {
             model.SetActive(enabled);
+            anim.SetBool("RunStart", true);
             yield return null;
             timer += Time.deltaTime;
             lastBlinking += Time.deltaTime;

@@ -54,10 +54,25 @@ public class Track : MonoBehaviour
         }
 
         //Under Water
+        int countUWObstacle1 = 0;
         for (int i = 0; i < newNumberOfUWObstacles; i++)
         {
-            newUWObstacles.Add(Instantiate(uwObstacles[Random.Range(0, uwObstacles.Length)], transform));
-            newUWObstacles[i].SetActive(false);
+            GameObject uwObstacle = uwObstacles[Random.Range(0, uwObstacles.Length)];
+            if (uwObstacle.name == "Barragem" && countUWObstacle1 < 1)
+            {
+                newUWObstacles.Add(Instantiate(uwObstacle, transform));
+                newUWObstacles[i].SetActive(false);
+                countUWObstacle1++;
+            }
+            else if (uwObstacle.name == "Barragem" && countUWObstacle1 >= 1)
+            {
+                i--; //decrementa i para não contar como objeto instanciado
+            }
+            else
+            {
+                newUWObstacles.Add(Instantiate(uwObstacle, transform));
+                newUWObstacles[i].SetActive(false);
+            }
         }
 
         for (int i = 0; i < newNumberOfCoins; i++)

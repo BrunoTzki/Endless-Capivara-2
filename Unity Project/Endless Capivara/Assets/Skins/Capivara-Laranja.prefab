@@ -24453,7 +24453,7 @@ MonoBehaviour:
   anim: {fileID: 5266740102327610055}
   playerSpriteRenderer: {fileID: 5266740102327610054}
   laneSpeed: 8
-  speed: 10
+  speed: 0
   jumpLength: 0.8
   jumpLengthStart: 0.8
   jumpHeight: 3
