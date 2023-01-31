@@ -16,12 +16,16 @@ public class PlayerData
     public int[] currentProgress;
     public int[] reward;
     public string[] missionType;
+    public int[] skinsCost;
 }
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager gm;
     public int coins;
+    public int[] skinsCost;
+
+    public int skinIndex;
 
     private MissionBase[] missions;
     private string filePath;
@@ -87,6 +91,7 @@ public class GameManager : MonoBehaviour
         data.currentProgress = new int[2];
         data.reward = new int[2];
         data.missionType = new string[2];
+        data.skinsCost = new int[skinsCost.Length];
 
         for (int i = 0; i < 2; i++)
         {
@@ -95,6 +100,11 @@ public class GameManager : MonoBehaviour
             data.currentProgress[i] = missions[i].currentProgress;
             data.reward[i] = missions[i].reward;
             data.missionType[i] = missions[i].missionType.ToString();
+        }
+
+        for (int i = 0; i < skinsCost.Length; i++)
+        {
+            data.skinsCost[i] = skinsCost[i];
         }
 
         bf.Serialize(file, data);
@@ -136,6 +146,11 @@ public class GameManager : MonoBehaviour
             missions[i].currentProgress = data.currentProgress[i];
             missions[i].reward = data.reward[i];
         }
+
+        for (int i = 0; i < data.skinsCost.Length; i++)
+        {
+            skinsCost[i] = data.skinsCost[i];
+        }
     }
     // Start is called before the first frame update
     void Start()
@@ -149,8 +164,9 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void StartRun()
+    public void StartRun(int skIndex)
     {
+        skinIndex = skIndex;
         SceneManager.LoadScene("Game");
     }
 

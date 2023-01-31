@@ -7,11 +7,16 @@ public class Menu : MonoBehaviour
     public Text[] missionDescription, missionReward, missionProgress;
     public GameObject[] rewardButton;
     public Text coinsText;
+    public Text costText;
+    public GameObject[] skins;
+
+    private int skinIndex = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         SetMission();
+        UpdateCoins(GameManager.gm.coins);    
     }
 
     // Update is called once per frame
@@ -27,7 +32,13 @@ public class Menu : MonoBehaviour
 
     public void StartRun()
     {
-        GameManager.gm.StartRun();
+        if (GameManager.gm.skinsCost[skinIndex] <= GameManager.gm.coins)
+        {
+            GameManager.gm.coins -= GameManager.gm.skinsCost[skinIndex];
+            GameManager.gm.skinsCost[skinIndex] = 0;
+            GameManager.gm.Save();
+            GameManager.gm.StartRun(skinIndex);
+        }
     }
     public void SetMission()
     {
@@ -54,5 +65,34 @@ public class Menu : MonoBehaviour
         rewardButton[missionIndex].SetActive(false);
         GameManager.gm.GenerateMission(missionIndex);
     }
+
+    public void CHangeSkin(int index) 
+    {
+        skinIndex += index;
+        if(skinIndex >= skins.Length)
+        {
+            skinIndex = 0;
+        }
+        else if(skinIndex < 0)
+        {
+            skinIndex = skins.Length - 1;
+        }
+
+        for (int i = 0; i < skins.Length; i++)
+        {
+            if(i == skinIndex)
+                skins[i].SetActive(true);
+            else
+                skins[i].SetActive(false);
+        }
+
+        string cost = "";
+        if (GameManager.gm.skinsCost[skinIndex] != 0)
+        {
+            cost = GameManager.gm.skinsCost[skinIndex].ToString();
+        }
+        costText.text = cost;
+    }
+
 }
      

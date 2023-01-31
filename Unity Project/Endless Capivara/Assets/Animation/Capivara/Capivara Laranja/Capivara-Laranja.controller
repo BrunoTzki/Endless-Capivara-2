@@ -133,7 +133,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -3353131412027970478}
-    m_Position: {x: 490, y: 50, z: 0}
+    m_Position: {x: 490, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5068610154939678912}
     m_Position: {x: 740, y: -120, z: 0}
@@ -143,9 +143,6 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 4270039511726489811}
     m_Position: {x: 230, y: -40, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 7300533356212357316}
-    m_Position: {x: 55, y: 185, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5006435400585135243}
     m_Position: {x: 480, y: -200, z: 0}
@@ -170,7 +167,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Capivara-01-Ilde
+  m_Name: Capivara-Ilde
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -187,7 +184,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: f2c17d20035ccfb448e1540a3e62038e, type: 2}
+  m_Motion: {fileID: 7400000, guid: 5842fca72df518843a19897d78d79d06, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -200,7 +197,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Capivara-01-L
+  m_Name: Capivara-L
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -214,7 +211,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: bcaa671f44bfa5e4c9a804e99ae974f7, type: 2}
+  m_Motion: {fileID: 7400000, guid: 47dea1d974d6df744a9aeafc4ca11666, type: 2}
   m_Tag: 
   m_SpeedParameter: JumpSpeed
   m_MirrorParameter: ToR
@@ -226,7 +223,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Capivara-01
+  m_Name: Capivara-Laranja
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: JumpSpeed
@@ -381,7 +378,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Capivara-01-dive
+  m_Name: Capivara-dive
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -395,7 +392,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5ce9f1d2c4f9a024689aaa6a7a5f6980, type: 2}
+  m_Motion: {fileID: 7400000, guid: 99eeb77c44bfcb249ae700fc386ece96, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -408,7 +405,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Capivara-01-Surface 0
+  m_Name: Capivara-Surface
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -435,7 +432,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Capivara-01-R
+  m_Name: Capivara-R
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -462,7 +459,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Capivara-01-jump
+  m_Name: Capivara-jump
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -477,7 +474,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: a2fc163a782d5a840a4b2ff51651711b, type: 2}
+  m_Motion: {fileID: 7400000, guid: 7ce4644e48a760f45ad96d14e083fe78, type: 2}
   m_Tag: 
   m_SpeedParameter: JumpSpeed
   m_MirrorParameter: 
@@ -511,32 +508,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 1
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1102 &7300533356212357316
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Capivara-01-Surface
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 99c49bee665431749b8624b3ec592aec, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1101 &7708985346878309687
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
