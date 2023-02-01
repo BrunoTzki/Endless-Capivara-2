@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{0512cbe7-5d7d-495e-85c5-80f5b39c9ada}">
+		<property name="assetPath">
+			<value>trilha_menu.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>10.6</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6e3a3649-2071-438a-9f8d-b434b60ccda2}</destination>
+		</relationship>
+	</object>
+</objects>

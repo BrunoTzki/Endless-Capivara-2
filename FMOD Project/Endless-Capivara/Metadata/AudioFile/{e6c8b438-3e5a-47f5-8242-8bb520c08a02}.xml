@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e6c8b438-3e5a-47f5-8242-8bb520c08a02}">
+		<property name="assetPath">
+			<value>dano_01.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.53135416666666668</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6e3a3649-2071-438a-9f8d-b434b60ccda2}</destination>
+		</relationship>
+	</object>
+</objects>
