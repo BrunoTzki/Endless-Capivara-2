@@ -319,6 +319,7 @@ public class Player : MonoBehaviour
         {
             canMove = false;
             currentLife--;
+            FMODUnity.RuntimeManager.PlayOneShot("Dano");
             uiManager.UpdateLive(currentLife);
             anim.SetTrigger("Hit");
             speedMemory = speed;
@@ -326,7 +327,7 @@ public class Player : MonoBehaviour
             if (currentLife <= 0)
             {
                 //GAME OVER
-
+                // Colocar trigger de morte aqui
                 speed = 0;
                 anim.SetBool("Dead", true);
                 uiManager.gameOverPanel.SetActive(true);
