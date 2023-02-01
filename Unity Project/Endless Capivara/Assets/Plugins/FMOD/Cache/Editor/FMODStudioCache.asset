@@ -1,0 +1,529 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7584481037649555363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/SFX/Coletar A\xE7a\xED (Moeda)"
+  m_EditorClassIdentifier: 
+  Path: "event:/SFX/Coletar A\xE7a\xED (Moeda)"
+  Guid:
+    Data1: 1302426708
+    Data2: 1309150779
+    Data3: 828208557
+    Data4: -1380282150
+  Banks:
+  - {fileID: -3816254881186148907}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7527267045349006535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Coletar Latinha (DeBuff)
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Coletar Latinha (DeBuff)
+  Guid:
+    Data1: 1681600295
+    Data2: 1163652966
+    Data3: 257885098
+    Data4: -1933092607
+  Banks:
+  - {fileID: -3816254881186148907}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6435547781153570360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: "parameter:/M\xFAsica da Mata Atl\xE2ntica/Afundar"
+  m_EditorClassIdentifier: 
+  Name: Afundar
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 225910865
+    data2: 1567963773
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-5891236324015610156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../../FMOD Project/Endless-Capivara/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638108000012831425
+  FileSizes:
+  - Name: Desktop
+    Value: 1538
+  Exists: 1
+--- !u!114 &-5603454379632057571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Nadando/Afundar
+  m_EditorClassIdentifier: 
+  Name: Afundar
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 225910865
+    data2: 1567963773
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-3816254881186148907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../FMOD Project/Endless-Capivara/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638108000012781571
+  FileSizes:
+  - Name: Desktop
+    Value: 1183616
+  Exists: 1
+--- !u!114 &-3563954718579810796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI EFX/Clique
+  m_EditorClassIdentifier: 
+  Path: event:/UI EFX/Clique
+  Guid:
+    Data1: 273179373
+    Data2: 1280715686
+    Data3: -1283767907
+    Data4: -847122595
+  Banks:
+  - {fileID: -3816254881186148907}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3142048700741141094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Volta do Pulo
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Volta do Pulo
+  Guid:
+    Data1: -505021300
+    Data2: 1171058728
+    Data3: -2035840358
+    Data4: -1770990274
+  Banks:
+  - {fileID: -3816254881186148907}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2959762108914754180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Nadando
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Nadando
+  Guid:
+    Data1: -320940872
+    Data2: 1085500028
+    Data3: -2022025566
+    Data4: -1101815216
+  Banks:
+  - {fileID: -3816254881186148907}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5603454379632057571}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8557
+--- !u!114 &-2624683980029533875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Coletar Carambola (Vida Extra)
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Coletar Carambola (Vida Extra)
+  Guid:
+    Data1: -946664140
+    Data2: 1121823170
+    Data3: -1112336214
+    Data4: 1851964211
+  Banks:
+  - {fileID: -3816254881186148907}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1257786812335706666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/SFX/Coletar Guaran\xE1 (Buff)"
+  m_EditorClassIdentifier: 
+  Path: "event:/SFX/Coletar Guaran\xE1 (Buff)"
+  Guid:
+    Data1: 1890302565
+    Data2: 1331093704
+    Data3: 1229420729
+    Data4: 94817883
+  Banks:
+  - {fileID: -3816254881186148907}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -5891236324015610156}
+  - {fileID: -3816254881186148907}
+  EditorEvents:
+  - {fileID: 2953549763325392313}
+  - {fileID: -7527267045349006535}
+  - {fileID: -2624683980029533875}
+  - {fileID: -7584481037649555363}
+  - {fileID: -1257786812335706666}
+  - {fileID: 4176123939706843088}
+  - {fileID: 8876952668922311361}
+  - {fileID: -3142048700741141094}
+  - {fileID: -2959762108914754180}
+  - {fileID: 7222311289660357264}
+  - {fileID: 2932225004346473983}
+  - {fileID: -3563954718579810796}
+  - {fileID: 8513047249891028307}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -3816254881186148907}
+  StringsBanks:
+  - {fileID: -5891236324015610156}
+  cacheTime: 638108000012831425
+  cacheVersion: 131591
+--- !u!114 &2932225004346473983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Event test
+  m_EditorClassIdentifier: 
+  Path: event:/Event test
+  Guid:
+    Data1: 1851910375
+    Data2: 1171384398
+    Data3: -290892922
+    Data4: 1668411226
+  Banks:
+  - {fileID: -3816254881186148907}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2953549763325392313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/BG/M\xFAsica do Menu (n\xE3o fazer)"
+  m_EditorClassIdentifier: 
+  Path: "event:/BG/M\xFAsica do Menu (n\xE3o fazer)"
+  Guid:
+    Data1: 1714083342
+    Data2: 1095357847
+    Data3: -1941770351
+    Data4: 478451231
+  Banks:
+  - {fileID: -3816254881186148907}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4176123939706843088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Pulo
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Pulo
+  Guid:
+    Data1: -1893622162
+    Data2: 1300894730
+    Data3: -47990101
+    Data4: -1569805324
+  Banks:
+  - {fileID: -3816254881186148907}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4891359014087755140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: "parameter:/M\xFAsica da Mata Atl\xE2ntica/Morreu"
+  m_EditorClassIdentifier: 
+  Name: Morreu
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2933913881
+    data2: 3333121146
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &7222311289660357264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/SFX/Voando com Guaran\xE1 (estrela do m\xE1rio)"
+  m_EditorClassIdentifier: 
+  Path: "event:/SFX/Voando com Guaran\xE1 (estrela do m\xE1rio)"
+  Guid:
+    Data1: -1484606005
+    Data2: 1145635010
+    Data3: 768487825
+    Data4: -1663142245
+  Banks:
+  - {fileID: -3816254881186148907}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7363862554504217389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: "parameter:/M\xFAsica da Mata Atl\xE2ntica/Iniciar Jogo"
+  m_EditorClassIdentifier: 
+  Name: Iniciar Jogo
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3017808203
+    data2: 2781448025
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &8513047249891028307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Dano
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Dano
+  Guid:
+    Data1: 1924332029
+    Data2: 1102397439
+    Data3: 1395091876
+    Data4: 1464795651
+  Banks:
+  - {fileID: -3816254881186148907}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8876952668922311361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/BG/M\xFAsica da Mata Atl\xE2ntica"
+  m_EditorClassIdentifier: 
+  Path: "event:/BG/M\xFAsica da Mata Atl\xE2ntica"
+  Guid:
+    Data1: -1292468112
+    Data2: 1323429031
+    Data3: 1222259617
+    Data4: 886990289
+  Banks:
+  - {fileID: -3816254881186148907}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 4891359014087755140}
+  - {fileID: 7363862554504217389}
+  - {fileID: -6435547781153570360}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 73600
