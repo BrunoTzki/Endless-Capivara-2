@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
 
     public int skinIndex;
 
+    public GameObject Menu;
+
     private MissionBase[] missions;
     private string filePath;
 
@@ -174,6 +176,7 @@ public class GameManager : MonoBehaviour
     public void EndRun()
     {
         SceneManager.LoadScene("Menu");
+        Menu.SetActive(true);
     }
 
     public MissionBase GetMission(int index)

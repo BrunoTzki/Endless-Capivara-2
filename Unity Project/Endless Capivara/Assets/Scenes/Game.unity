@@ -3310,6 +3310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceMinima: 0.5
+  UWdistanceMinima: 0.5
   maxTries: 100
   Obstacles:
   - {fileID: 8899806721435948145, guid: fc3827efd9728ef4f9b2301ff5190628, type: 3}
@@ -3327,7 +3328,7 @@ MonoBehaviour:
   - {fileID: 8899806721435948145, guid: b3408eb60a1981248ba05ca6fdfb5774, type: 3}
   - {fileID: 3264743291324940823, guid: 7c99f453b30ce8e4e9c84c18ca44a6e0, type: 3}
   numberOfObstacles: {x: 11, y: 15}
-  numberOfUWObstacles: {x: 8, y: 12}
+  numberOfUWObstacles: {x: 10, y: 13}
   coin: {fileID: 9064987370366432040, guid: 199875b59dac0c743a38b4b4c07dcfbc, type: 3}
   numberOfCoins: {x: 25, y: 30}
   specials:
@@ -3602,7 +3603,7 @@ GameObject:
   - component: {fileID: 1236607867}
   - component: {fileID: 1236607866}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: FMOD - Parameter Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5795,6 +5796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceMinima: 0.5
+  UWdistanceMinima: 0.5
   maxTries: 100
   Obstacles:
   - {fileID: 8899806721435948145, guid: fc3827efd9728ef4f9b2301ff5190628, type: 3}

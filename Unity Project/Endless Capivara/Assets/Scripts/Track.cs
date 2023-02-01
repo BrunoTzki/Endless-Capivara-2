@@ -5,6 +5,7 @@ using UnityEngine;
 public class Track : MonoBehaviour
 {
     public float distanceMinima;
+    public float UWdistanceMinima;
     public int maxTries;
     public GameObject[] Obstacles;
     public GameObject[] uwObstacles;
@@ -112,16 +113,47 @@ public class Track : MonoBehaviour
     {
         for (int i = 0; i < newUWObstacles.Count; i++)
         {
-            float UWposZmin = (190f / newUWObstacles.Count) + (190f / newUWObstacles.Count) * i;
-            float UWposZmax = (190f / newUWObstacles.Count) + (190f / newUWObstacles.Count) * i + 1;
-            newUWObstacles[i].transform.localPosition = new Vector3(0, 0, Random.Range(UWposZmin, UWposZmax));
-            newUWObstacles[i].SetActive(true);
+            float UWposZmin = (190f / newUWObstacles.Count) + (190f / newUWObstacles.Count) * i - 2f;
+            float UWposZmax = (190f / newUWObstacles.Count) + (190f / newUWObstacles.Count) * i + 10f;
+            float uwRandomZPos = Random.Range(UWposZmin, UWposZmax);
+            //newUWObstacles[i].transform.localPosition = new Vector3(0, 0, Random.Range(UWposZmin, UWposZmax));
+            //newUWObstacles[i].SetActive(true);
 
-            if (newUWObstacles[i].GetComponent<UnderWaterObject>() != null)
-                newUWObstacles[i].GetComponent<UnderWaterObject>().UWPosition();
+            int randomLane = 0;
 
             if (newUWObstacles[i].GetComponent<ChangeLane>() != null)
-                newUWObstacles[i].GetComponent<ChangeLane>().PositionLane();
+            {
+                randomLane = Random.Range(-1, 2);
+            }
+
+            Vector3 newPos = new Vector3(randomLane, -2.5f, uwRandomZPos);
+            Collider[] colliders;
+            int cont = 0;
+            do
+            {
+
+                colliders = Physics.OverlapSphere(newPos, UWdistanceMinima);
+                if (colliders.Length > 0)
+                {
+                    Debug.Log("UW obstacle Colidiu");
+                    uwRandomZPos = Random.Range(UWposZmin, UWposZmax);
+                    newPos = new Vector3(randomLane, -2.5f, uwRandomZPos);
+                    newUWObstacles[i].transform.localPosition = newPos;
+                    cont++;
+                    Debug.Log("UW obstacle Mudou de posição x para " + uwRandomZPos + ": X "+ cont);
+
+                }
+            } while (colliders.Length > 0 && cont <= maxTries);
+
+            if (cont > maxTries)
+            {
+                Debug.Log("UW obstacle Desistiu de procurar um novo lugar");
+                continue;
+                // aqui você pode tratar o caso de não conseguir gerar uma posição válida
+            }
+            newUWObstacles[i].transform.localPosition = newPos;
+            UWposZmin = uwRandomZPos + 1;
+            newUWObstacles[i].SetActive(true);
 
         }
     }
@@ -147,6 +179,7 @@ public class Track : MonoBehaviour
                     Debug.Log("Colidiu");
                     randomLane = Random.Range(-1, 2);
                     randomLaneY = Random.Range(-1, 1);
+                    randomZpos = Random.Range(minZpos, maxZpos);
                     newPos = new Vector3(randomLane, randomLaneY*2.2f, randomZpos);
                     newCoins[i].transform.localPosition = newPos;
                     cont++;
@@ -188,8 +221,8 @@ public class Track : MonoBehaviour
             transform.position = new Vector3(0, 0, transform.position.z + 200 * 2);
 
             PositionateObstacles();
-            PositionateCoins();
             PositionateUWObstacles();
+            PositionateCoins();
             PositionateSpecials();
         }
     }

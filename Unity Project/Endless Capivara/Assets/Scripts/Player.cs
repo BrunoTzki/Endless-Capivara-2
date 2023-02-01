@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
     public FMODUnity.EventReference endJumpFMOD;
     public FMODUnity.EventReference CoinFMOD;
     public FMODUnity.EventReference CarambolaFMOD;
+    public FMODUnity.EventReference GuaranaFMOD;
     public FMODUnity.StudioEventEmitter Nadando;
 
     private float speedMemory;
@@ -46,6 +47,7 @@ public class Player : MonoBehaviour
     private float jumpStart;
     private int currentlaneY = 2;
     private bool submerged = false;
+    private bool flying = false;
     //private Vector3 boxColliderSize;
     private bool isSwipping = false;
     private Vector2 startingTouch;
@@ -369,6 +371,32 @@ public class Player : MonoBehaviour
             }
             other.transform.parent.gameObject.SetActive(false);
         }
+
+        if (other.CompareTag("Guarana"))
+        {
+            float memoryZposition = transform.position.z;
+            Debug.Log("Memoria z do player = " + memoryZposition);
+            flying = true;
+            Fly(memoryZposition);
+            FMODUnity.RuntimeManager.PlayOneShot(GuaranaFMOD);
+            other.transform.parent.gameObject.SetActive(false);
+        }
+    }
+
+    void Fly(float memoryZPlayer)
+    {
+        while (flying=true && transform.position.z < memoryZPlayer + 100f)
+        {
+
+            anim.SetBool("Flying", true);
+            verticalTargetPosition.y = 3f;
+            invincible = true;
+            Debug.Log("Esta Voando");
+        }
+
+        verticalTargetPosition.y = 0;
+        invincible = false;
+        flying = false;
     }
 
     IEnumerator Blinking(float time)
