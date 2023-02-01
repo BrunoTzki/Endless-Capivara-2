@@ -21,11 +21,15 @@ public class Player : MonoBehaviour
     public GameObject model;
     public float invincibleTime;
     public float FlyingTime;
+    public float drunkTime;
+    //public float drunkMagnitude;
     public float multiplySpeed;
 
     public GameObject particleUW;
     public GameObject particleRiver;
     public GameObject particleGuarana;
+
+    private CameraShake cameraShake;
 
 
     public float score; 
@@ -38,6 +42,7 @@ public class Player : MonoBehaviour
     public FMODUnity.EventReference CoinFMOD;
     public FMODUnity.EventReference CarambolaFMOD;
     public FMODUnity.EventReference GuaranaFMOD;
+    public FMODUnity.EventReference LatinhaFMOD;
     public FMODUnity.StudioEventEmitter Nadando;
 
     private float speedMemory;
@@ -50,6 +55,7 @@ public class Player : MonoBehaviour
     private int currentlaneY = 2;
     private bool submerged = false;
     private bool flying = false;
+    private bool drunk = false;
     //private Vector3 boxColliderSize;
     private bool isSwipping = false;
     private Vector2 startingTouch;
@@ -71,6 +77,7 @@ public class Player : MonoBehaviour
         currentLife = MaxLife;
         uiManager = FindObjectOfType<UiManager>();
         cameraFollow = FindObjectOfType<CameraFollow>();
+        cameraShake = FindObjectOfType<CameraShake>();
         GameManager.gm.StartMissions();
         particleGuarana.SetActive(false);
         Invoke("StartRun", 3f);
@@ -154,16 +161,29 @@ public class Player : MonoBehaviour
                     else
                     {
 
-                            anim.SetFloat("Touch X", diff.x);
+                        anim.SetFloat("Touch X", diff.x);
 
                         if (diff.x < 0)
                         {
-                            ChangeLane(-1);
-
+                            if (drunk)
+                            {
+                                ChangeLane(1);
+                            }
+                            else if (!drunk)
+                            {
+                                ChangeLane(-1);
+                            }
                         }
-                        else
+                        else if (diff.x > 0)
                         {
-                            ChangeLane(1);
+                            if (drunk)
+                            {
+                                ChangeLane(-1);
+                            }
+                            else if (!drunk)
+                            {
+                                ChangeLane(1);
+                            }
                         }
                     }
 
@@ -380,12 +400,34 @@ public class Player : MonoBehaviour
         {
             FMODUnity.RuntimeManager.PlayOneShot(GuaranaFMOD);
             other.transform.parent.gameObject.SetActive(false);
-            float memoryZposition = transform.position.z;
-            Debug.Log("Pegou guarana. Memoria z do player = " + memoryZposition);
             flying = true;
             jumping = true;
             StartCoroutine(Fly(FlyingTime));
         }
+
+        if (other.CompareTag("Latinha"))
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(LatinhaFMOD);
+            other.transform.parent.gameObject.SetActive(false);
+            StartCoroutine(Drunk(drunkTime));
+        }
+    }
+
+    IEnumerator Drunk(float time)
+    {
+        drunk = true;
+        float timer = 0;
+        while (timer < time && drunk)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+
+            if (!drunk)
+            {
+                break;
+            }
+        }
+        drunk = false;
     }
 
     IEnumerator Fly (float time)
@@ -396,7 +438,6 @@ public class Player : MonoBehaviour
             cameraFollow.submerged = false;
         }
         particleGuarana.SetActive(true);
-        Debug.Log("Função Fly chamada com sucesso");
         invincible = true;
         float timer = 0;
         float flySpeed = speed * 0.4f;
@@ -407,13 +448,10 @@ public class Player : MonoBehaviour
             verticalTargetPosition.y = 3;
             timer += Time.deltaTime;
             yield return null;
-
-            Debug.Log("Comecou a voar");
             if (!flying) 
             {
                 break; 
             }
-
         }
         anim.SetBool("Fly", false);
         particleGuarana.SetActive(false);
@@ -422,8 +460,6 @@ public class Player : MonoBehaviour
         flying = false;
         jumping = false;
         speed = speed - flySpeed;
-
-        Debug.Log("terminou de voar");
     }
 
     IEnumerator Blinking(float time)

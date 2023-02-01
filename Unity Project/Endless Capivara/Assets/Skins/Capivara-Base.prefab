@@ -38941,6 +38941,8 @@ MonoBehaviour:
   model: {fileID: 5266740102327610052}
   invincibleTime: 2
   FlyingTime: 4
+  drunkTime: 4
+  drunkMagnitude: 0.1
   multiplySpeed: 1.125
   particleUW: {fileID: 5266740101118429635}
   particleRiver: {fileID: 5266740100618514381}
@@ -38989,6 +38991,13 @@ MonoBehaviour:
       Data3: -1112336214
       Data4: 1851964211
     Path: event:/SFX/Coletar Carambola (Vida Extra)
+  LatinhaFMOD:
+    Guid:
+      Data1: 1681600295
+      Data2: 1163652966
+      Data3: 257885098
+      Data4: -1933092607
+    Path: event:/SFX/Coletar Latinha (DeBuff)
   Nadando: {fileID: -8925296429951964120}
   currentLife: 0
 --- !u!212 &5266740102365126169
