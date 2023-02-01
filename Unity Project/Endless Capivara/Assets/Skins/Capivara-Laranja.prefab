@@ -24383,6 +24383,7 @@ GameObject:
   - component: {fileID: 5266740102365126174}
   - component: {fileID: 5266740102365126168}
   - component: {fileID: 5266740102365126169}
+  - component: {fileID: -8888062066154601310}
   m_Layer: 0
   m_Name: Capivara-Laranja
   m_TagString: Player
@@ -24469,6 +24470,42 @@ MonoBehaviour:
   particleRiver: {fileID: 5266740100618514381}
   score: 0
   coins: 0
+  DanoFMOD:
+    Guid:
+      Data1: 1924332029
+      Data2: 1102397439
+      Data3: 1395091876
+      Data4: 1464795651
+    Path: event:/SFX/Dano
+  JumpFMOD:
+    Guid:
+      Data1: -1893622162
+      Data2: 1300894730
+      Data3: -47990101
+      Data4: -1569805324
+    Path: event:/SFX/Pulo
+  endJumpFMOD:
+    Guid:
+      Data1: -505021300
+      Data2: 1171058728
+      Data3: -2035840358
+      Data4: -1770990274
+    Path: event:/SFX/Volta do Pulo
+  CoinFMOD:
+    Guid:
+      Data1: 1302426708
+      Data2: 1309150779
+      Data3: 828208557
+      Data4: -1380282150
+    Path: "event:/SFX/Coletar A\xE7a\xED (Moeda)"
+  CarambolaFMOD:
+    Guid:
+      Data1: -946664140
+      Data2: 1121823170
+      Data3: -1112336214
+      Data4: 1851964211
+    Path: event:/SFX/Coletar Carambola (Vida Extra)
+  Nadando: {fileID: -8888062066154601310}
   currentLife: 0
 --- !u!212 &5266740102365126169
 SpriteRenderer:
@@ -24522,6 +24559,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-8888062066154601310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5266740102365126172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -320940872
+      Data2: 1085500028
+      Data3: -2022025566
+      Data4: -1101815216
+    Path: event:/SFX/Nadando
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Afundar
+    Value: 0
+  - Name: Esta Nadando
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &5266740102378542373
 GameObject:
   m_ObjectHideFlags: 0

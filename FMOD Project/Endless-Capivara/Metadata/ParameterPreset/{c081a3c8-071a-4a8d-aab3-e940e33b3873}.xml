@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="ParameterPreset" id="{574001b3-2684-4cbf-a319-48defee99750}">
+	<object class="ParameterPreset" id="{c081a3c8-071a-4a8d-aab3-e940e33b3873}">
 		<property name="name">
-			<value>Morreu</value>
+			<value>Master Volume</value>
 		</property>
 		<relationship name="folder">
 			<destination>{75ff9506-37e2-4022-b016-9987f6d05a56}</destination>
 		</relationship>
 		<relationship name="parameter">
-			<destination>{17e4c165-784c-460a-bec7-bd52d66ac5af}</destination>
+			<destination>{a8a0b201-713a-4a3a-8416-d5f0af124fca}</destination>
 		</relationship>
 	</object>
-	<object class="GameParameter" id="{17e4c165-784c-460a-bec7-bd52d66ac5af}">
+	<object class="GameParameter" id="{a8a0b201-713a-4a3a-8416-d5f0af124fca}">
 		<property name="isGlobal">
 			<value>true</value>
 		</property>

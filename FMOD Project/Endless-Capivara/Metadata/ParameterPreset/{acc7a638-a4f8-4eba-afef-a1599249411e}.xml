@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="ParameterPreset" id="{574001b3-2684-4cbf-a319-48defee99750}">
+	<object class="ParameterPreset" id="{acc7a638-a4f8-4eba-afef-a1599249411e}">
 		<property name="name">
-			<value>Morreu</value>
+			<value>Music Volume</value>
 		</property>
 		<relationship name="folder">
 			<destination>{75ff9506-37e2-4022-b016-9987f6d05a56}</destination>
 		</relationship>
 		<relationship name="parameter">
-			<destination>{17e4c165-784c-460a-bec7-bd52d66ac5af}</destination>
+			<destination>{b3ff6f01-d043-4c49-b291-7bfb4bf68fb7}</destination>
 		</relationship>
 	</object>
-	<object class="GameParameter" id="{17e4c165-784c-460a-bec7-bd52d66ac5af}">
+	<object class="GameParameter" id="{b3ff6f01-d043-4c49-b291-7bfb4bf68fb7}">
 		<property name="isGlobal">
 			<value>true</value>
 		</property>

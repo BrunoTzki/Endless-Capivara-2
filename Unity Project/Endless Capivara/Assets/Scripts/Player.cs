@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Player : MonoBehaviour
 {
     public Animator anim;
@@ -27,6 +28,14 @@ public class Player : MonoBehaviour
 
     public float score; 
     public int coins;
+
+
+    public FMODUnity.EventReference DanoFMOD;
+    public FMODUnity.EventReference JumpFMOD;
+    public FMODUnity.EventReference endJumpFMOD;
+    public FMODUnity.EventReference CoinFMOD;
+    public FMODUnity.EventReference CarambolaFMOD;
+    public FMODUnity.StudioEventEmitter Nadando;
 
     private float speedMemory;
     private Rigidbody rb;
@@ -62,6 +71,7 @@ public class Player : MonoBehaviour
 
         Invoke("StartRun", 3f);
     }
+
 
     // Update is called once per frame
     void Update()
@@ -112,6 +122,7 @@ public class Player : MonoBehaviour
                             {
                                 Submerge(-2);
                                 submerged = true;
+                                Nadando.SetParameter("Afundar", 1f);
                             }
                         }
                         else
@@ -123,6 +134,7 @@ public class Player : MonoBehaviour
                                 Submerge(2);
                                 submerged = false;
                                 cameraFollow.submerged = false;
+                                Nadando.SetParameter("Afundar", 0f);
                             }
                             else
                             {
@@ -171,6 +183,8 @@ public class Player : MonoBehaviour
             if (ratio >= 1f)
             {
                 jumping = false;
+                Nadando.SetParameter("Esta Nadando", 1f);
+                FMODUnity.RuntimeManager.PlayOneShot(endJumpFMOD);
                 anim.SetBool("Jumping", false);
             }
             else
@@ -259,6 +273,7 @@ public class Player : MonoBehaviour
     {
         anim.SetBool("RunStart", true);
         speed = minSpeed;
+        Nadando.SetParameter("Esta Nadando", 1f);
         jumpLength = jumpLengthStart * speed;
         canMove = true;
     }
@@ -291,6 +306,8 @@ public class Player : MonoBehaviour
             jumpStart = transform.position.z;
             anim.SetFloat("JumpSpeed", speed / jumpLength);
             anim.SetBool("Jumping", true);
+            FMODUnity.RuntimeManager.PlayOneShot(JumpFMOD);
+            Nadando.SetParameter("Esta Nadando", 0f);
             jumping = true;
         }
     }
@@ -310,6 +327,7 @@ public class Player : MonoBehaviour
         {
             coins++;
             uiManager.UpdateCoins(coins);
+            FMODUnity.RuntimeManager.PlayOneShot(CoinFMOD);
             other.transform.parent.gameObject.SetActive(false);
         }
         if (invincible)
@@ -319,11 +337,12 @@ public class Player : MonoBehaviour
         {
             canMove = false;
             currentLife--;
-            FMODUnity.RuntimeManager.PlayOneShot("Dano");
+            FMODUnity.RuntimeManager.PlayOneShot(DanoFMOD);
             uiManager.UpdateLive(currentLife);
             anim.SetTrigger("Hit");
             speedMemory = speed;
             speed = 0;
+            Nadando.SetParameter("Esta Nadando", 0f);
             if (currentLife <= 0)
             {
                 //GAME OVER
@@ -341,6 +360,8 @@ public class Player : MonoBehaviour
 
         if (other.CompareTag("Carambola"))
         {
+            FMODUnity.RuntimeManager.PlayOneShot(CarambolaFMOD);
+
             if (currentLife < 3) 
             {
                 currentLife++;
@@ -361,6 +382,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(1f);
         //speed = ini
         speed = speedMemory;
+        Nadando.SetParameter("Esta Nadando", 1f);
         canMove = true;
         while (timer < time && invincible)
         {
