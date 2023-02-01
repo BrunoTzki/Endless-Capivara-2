@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
         DontDestroyOnLoad(gameObject);
 
         filePath = Application.persistentDataPath + "/playerinfo.dat";

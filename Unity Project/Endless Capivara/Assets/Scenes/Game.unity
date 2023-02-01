@@ -3642,7 +3642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollisionTag: 
   Parameter: Morreu
-  TriggerEvent: 1
+  TriggerEvent: 11
   Value: 1
 --- !u!114 &1236607866
 MonoBehaviour:
