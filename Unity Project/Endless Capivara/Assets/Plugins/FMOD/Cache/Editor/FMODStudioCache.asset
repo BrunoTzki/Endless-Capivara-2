@@ -93,7 +93,7 @@ MonoBehaviour:
   Path: ../../FMOD Project/Endless-Capivara/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638108137985892091
+  lastModified: 638108142862192653
   FileSizes:
   - Name: Desktop
     Value: 1812
@@ -161,10 +161,10 @@ MonoBehaviour:
   Path: ../../FMOD Project/Endless-Capivara/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638108137985842212
+  lastModified: 638108142862133100
   FileSizes:
   - Name: Desktop
-    Value: 1185920
+    Value: 1185696
   Exists: 1
 --- !u!114 &-3563954718579810796
 MonoBehaviour:
@@ -366,7 +366,7 @@ MonoBehaviour:
   - {fileID: -3816254881186148907}
   StringsBanks:
   - {fileID: -5891236324015610156}
-  cacheTime: 638108137985892091
+  cacheTime: 638108142862192653
   cacheVersion: 131591
 --- !u!114 &1944366548231073361
 MonoBehaviour:

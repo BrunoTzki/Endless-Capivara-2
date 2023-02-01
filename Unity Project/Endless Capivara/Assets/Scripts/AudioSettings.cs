@@ -11,8 +11,8 @@ public class AudioSettings : MonoBehaviour
 
 
     float masterVolume = 1f;
-    float sfxVolume = 0.8f;
-    float musicVolume = 0.8f;
+    float sfxVolume = 0.5f;
+    float musicVolume = 0.5f;
 
     private void Awake()
     {
