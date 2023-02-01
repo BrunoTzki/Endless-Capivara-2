@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public float maxSpeed = 30f;
     public GameObject model;
     public float invincibleTime;
+    public float FlyingTime;
     public float multiplySpeed;
 
     public GameObject particleUW;
@@ -120,11 +121,15 @@ public class Player : MonoBehaviour
                             {
                                 CancelJump();
                             }
-                            else
+                            else if(!flying)
                             {
                                 Submerge(-2);
                                 submerged = true;
                                 Nadando.SetParameter("Afundar", 1f);
+                            }
+                            else if (flying)
+                            {
+                                flying = false;
                             }
                         }
                         else
@@ -138,7 +143,7 @@ public class Player : MonoBehaviour
                                 cameraFollow.submerged = false;
                                 Nadando.SetParameter("Afundar", 0f);
                             }
-                            else
+                            else if(!flying)
                             {
                             //Not Submerged
                                 Jump();;
@@ -347,8 +352,6 @@ public class Player : MonoBehaviour
             Nadando.SetParameter("Esta Nadando", 0f);
             if (currentLife <= 0)
             {
-                //GAME OVER
-                // Colocar trigger de morte aqui
                 speed = 0;
                 anim.SetBool("Dead", true);
                 uiManager.gameOverPanel.SetActive(true);
@@ -374,29 +377,50 @@ public class Player : MonoBehaviour
 
         if (other.CompareTag("Guarana"))
         {
-            float memoryZposition = transform.position.z;
-            Debug.Log("Memoria z do player = " + memoryZposition);
-            flying = true;
-            Fly(memoryZposition);
             FMODUnity.RuntimeManager.PlayOneShot(GuaranaFMOD);
             other.transform.parent.gameObject.SetActive(false);
+            float memoryZposition = transform.position.z;
+            Debug.Log("Pegou guarana. Memoria z do player = " + memoryZposition);
+            flying = true;
+            jumping = true;
+            StartCoroutine(Fly(FlyingTime));
         }
     }
 
-    void Fly(float memoryZPlayer)
+    IEnumerator Fly (float time)
     {
-        while (flying=true && transform.position.z < memoryZPlayer + 100f)
+        if (submerged)
         {
-
-            anim.SetBool("Flying", true);
-            verticalTargetPosition.y = 3f;
-            invincible = true;
-            Debug.Log("Esta Voando");
+            submerged = false;
+            cameraFollow.submerged = false;
         }
+        Debug.Log("Função Fly chamada com sucesso");
+        invincible = true;
+        float timer = 0;
+        float flySpeed = speed * 0.4f;
+        speed = speed + flySpeed;
+        while (timer < time && flying)
+        {
+            anim.SetBool("Fly", true);
+            verticalTargetPosition.y = 3;
+            timer += Time.deltaTime;
+            yield return null;
 
+            Debug.Log("Comecou a voar");
+            if (!flying) 
+            {
+                anim.SetBool("Fly", false);
+                break; 
+            }
+
+        }
         verticalTargetPosition.y = 0;
         invincible = false;
         flying = false;
+        jumping = false;
+        speed = speed - flySpeed;
+
+        Debug.Log("terminou de voar");
     }
 
     IEnumerator Blinking(float time)

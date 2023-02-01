@@ -24465,6 +24465,7 @@ MonoBehaviour:
   maxSpeed: 20
   model: {fileID: 5266740102327610052}
   invincibleTime: 2
+  FlyingTime: 4
   multiplySpeed: 1.125
   particleUW: {fileID: 5266740101118429635}
   particleRiver: {fileID: 5266740100618514381}
@@ -24499,6 +24500,13 @@ MonoBehaviour:
       Data4: -1380282150
     Path: "event:/SFX/Coletar A\xE7a\xED (Moeda)"
   CarambolaFMOD:
+    Guid:
+      Data1: -946664140
+      Data2: 1121823170
+      Data3: -1112336214
+      Data4: 1851964211
+    Path: event:/SFX/Coletar Carambola (Vida Extra)
+  GuaranaFMOD:
     Guid:
       Data1: -946664140
       Data2: 1121823170
