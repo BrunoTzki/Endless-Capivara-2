@@ -19,10 +19,14 @@ public class Track : MonoBehaviour
     public GameObject[] specials;
     public Vector2 numberOfSpecials;
 
+    public GameObject[] debuffs;
+    public Vector2 numberOfDebuffs;
+
     public List<GameObject> newObstacles;
     public List<GameObject> newUWObstacles;
     public List<GameObject> newCoins;
     public List<GameObject> newSpecials;
+    public List<GameObject> newDebuffs;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +35,7 @@ public class Track : MonoBehaviour
         int newNumberOfUWObstacles = (int)Random.Range(numberOfUWObstacles.x, numberOfUWObstacles.y);
         int newNumberOfCoins = (int)Random.Range(numberOfCoins.x, numberOfCoins.y);
         int newNumberOfSpecials = (int)Random.Range(numberOfSpecials.x, numberOfSpecials.y);
+        int newNumberOfDebuffs = (int)Random.Range(numberOfDebuffs.x, numberOfDebuffs.y);
 
         //Over Water
         int countObstacle1 = 0;
@@ -88,10 +93,17 @@ public class Track : MonoBehaviour
             newSpecials[i].SetActive(false);
         }
 
+        for (int i = 0; i < newNumberOfDebuffs; i++)
+        {
+            newDebuffs.Add(Instantiate(debuffs[Random.Range(0, debuffs.Length)], transform));
+            newDebuffs[i].SetActive(false);
+        }
+
         PositionateObstacles();
         PositionateUWObstacles();
         PositionateCoins();
         PositionateSpecials();
+        PositionateDebuffs();
 
     }
 
@@ -213,6 +225,20 @@ public class Track : MonoBehaviour
             minZpos = randomZpos + 50;
         }
     }
+    void PositionateDebuffs()
+    {
+        float minZpos = 20f;
+
+        for (int i = 0; i < newDebuffs.Count; i++)
+        {
+            float maxZpos = minZpos + 50f;
+            float randomZpos = Random.Range(minZpos, maxZpos);
+            newDebuffs[i].transform.localPosition = new Vector3(transform.position.x, transform.position.y, randomZpos);
+            newDebuffs[i].SetActive(true);
+            newDebuffs[i].GetComponent<ChangeLaneSpecials>().PositionLaneSpecials();
+            minZpos = randomZpos + 50;
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -224,6 +250,7 @@ public class Track : MonoBehaviour
             PositionateUWObstacles();
             PositionateCoins();
             PositionateSpecials();
+            PositionateDebuffs();
         }
     }
 

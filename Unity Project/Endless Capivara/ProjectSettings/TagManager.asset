@@ -8,6 +8,7 @@ TagManager:
   - Coin
   - Guarana
   - Carambola
+  - Latinha
   layers:
   - Default
   - TransparentFX
