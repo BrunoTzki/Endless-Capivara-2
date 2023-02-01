@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
 
     public GameObject particleUW;
     public GameObject particleRiver;
+    public GameObject particleGuarana;
 
 
     public float score; 
@@ -71,7 +72,7 @@ public class Player : MonoBehaviour
         uiManager = FindObjectOfType<UiManager>();
         cameraFollow = FindObjectOfType<CameraFollow>();
         GameManager.gm.StartMissions();
-
+        particleGuarana.SetActive(false);
         Invoke("StartRun", 3f);
     }
 
@@ -394,6 +395,7 @@ public class Player : MonoBehaviour
             submerged = false;
             cameraFollow.submerged = false;
         }
+        particleGuarana.SetActive(true);
         Debug.Log("Função Fly chamada com sucesso");
         invincible = true;
         float timer = 0;
@@ -409,11 +411,12 @@ public class Player : MonoBehaviour
             Debug.Log("Comecou a voar");
             if (!flying) 
             {
-                anim.SetBool("Fly", false);
                 break; 
             }
 
         }
+        anim.SetBool("Fly", false);
+        particleGuarana.SetActive(false);
         verticalTargetPosition.y = 0;
         invincible = false;
         flying = false;
