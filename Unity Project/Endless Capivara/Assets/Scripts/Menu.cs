@@ -9,6 +9,8 @@ public class Menu : MonoBehaviour
     public Text coinsText;
     public Text costText;
     public GameObject[] skins;
+    public GameObject startButton;
+    public GameObject buyButton;
 
     private int skinIndex = 0;
 
@@ -24,20 +26,34 @@ public class Menu : MonoBehaviour
     {
         
     }
+    public void RefreshMenu() 
+    {
+        SetMission();
+        UpdateCoins(GameManager.gm.coins);
+    }
 
     public void UpdateCoins(int coins)
     {
+
         coinsText.text = coins.ToString();
     }
 
     public void StartRun()
+    {
+            GameManager.gm.StartRun(skinIndex);
+    }
+
+    public void BuySkin()
     {
         if (GameManager.gm.skinsCost[skinIndex] <= GameManager.gm.coins)
         {
             GameManager.gm.coins -= GameManager.gm.skinsCost[skinIndex];
             GameManager.gm.skinsCost[skinIndex] = 0;
             GameManager.gm.Save();
-            GameManager.gm.StartRun(skinIndex);
+            string cost = "";
+            costText.text = cost;
+            startButton.SetActive(true);
+            buyButton.SetActive(false);
         }
     }
     public void SetMission()
@@ -90,6 +106,13 @@ public class Menu : MonoBehaviour
         if (GameManager.gm.skinsCost[skinIndex] != 0)
         {
             cost = GameManager.gm.skinsCost[skinIndex].ToString();
+            startButton.SetActive(false);
+            buyButton.SetActive(true);
+        }
+        else
+        {
+            startButton.SetActive(true);
+            buyButton.SetActive(false);
         }
         costText.text = cost;
     }

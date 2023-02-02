@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     private MissionBase[] missions;
     private string filePath;
+    private Menu menuCT;
 
     private void Awake()
     {
@@ -177,6 +178,8 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
         Menu.SetActive(true);
+        menuCT = FindObjectOfType<Menu>();
+        menuCT.RefreshMenu();
     }
 
     public MissionBase GetMission(int index)
