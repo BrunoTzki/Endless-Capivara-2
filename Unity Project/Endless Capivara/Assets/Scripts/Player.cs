@@ -29,9 +29,6 @@ public class Player : MonoBehaviour
     public GameObject particleRiver;
     public GameObject particleGuarana;
 
-    private CameraShake cameraShake;
-
-
     public float score; 
     public int coins;
 
@@ -77,9 +74,9 @@ public class Player : MonoBehaviour
         currentLife = MaxLife;
         uiManager = FindObjectOfType<UiManager>();
         cameraFollow = FindObjectOfType<CameraFollow>();
-        cameraShake = FindObjectOfType<CameraShake>();
         GameManager.gm.StartMissions();
         particleGuarana.SetActive(false);
+        uiManager.StartTimerCall();
         Invoke("StartRun", 3f);
     }
 

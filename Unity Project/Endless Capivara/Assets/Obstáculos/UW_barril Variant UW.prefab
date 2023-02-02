@@ -62,6 +62,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90.49
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 30b04716dfafa7a4fa7e81bb2faf3b41,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 30b04716dfafa7a4fa7e81bb2faf3b41,
         type: 3}
       propertyPath: m_Name
@@ -105,6 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d41428656c9bda5448ae60bf26f1044c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UWValue: -2.5
 --- !u!114 &6148472711377233970
 MonoBehaviour:
   m_ObjectHideFlags: 0
