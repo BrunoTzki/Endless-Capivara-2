@@ -3450,11 +3450,11 @@ MonoBehaviour:
   - {fileID: 1914670280412414493, guid: cfa0040eb8a59bf4aa7725c9d1320be8, type: 3}
   - {fileID: 1914670280412414493, guid: 477a5ac01a17df7499052f73668b5151, type: 3}
   - {fileID: 1393387499143404425, guid: 00b0f162dcfd1604881378caebe78cbc, type: 3}
+  - {fileID: 3264743291324940823, guid: 7c99f453b30ce8e4e9c84c18ca44a6e0, type: 3}
   uwObstacles:
   - {fileID: 1729764520545485879, guid: e48060d1c342e0343bb478ab87a0c87c, type: 3}
   - {fileID: 5823213826138541096, guid: 7eadf5ec9e17eef469bd45ddfae106fb, type: 3}
   - {fileID: 8899806721435948145, guid: b3408eb60a1981248ba05ca6fdfb5774, type: 3}
-  - {fileID: 3264743291324940823, guid: 7c99f453b30ce8e4e9c84c18ca44a6e0, type: 3}
   numberOfObstacles: {x: 11, y: 15}
   numberOfUWObstacles: {x: 10, y: 13}
   coin: {fileID: 9064987370366432040, guid: 199875b59dac0c743a38b4b4c07dcfbc, type: 3}
@@ -6032,11 +6032,11 @@ MonoBehaviour:
   - {fileID: 1914670280412414493, guid: cfa0040eb8a59bf4aa7725c9d1320be8, type: 3}
   - {fileID: 1914670280412414493, guid: 477a5ac01a17df7499052f73668b5151, type: 3}
   - {fileID: 1393387499143404425, guid: 00b0f162dcfd1604881378caebe78cbc, type: 3}
+  - {fileID: 3264743291324940823, guid: 7c99f453b30ce8e4e9c84c18ca44a6e0, type: 3}
   uwObstacles:
   - {fileID: 1729764520545485879, guid: e48060d1c342e0343bb478ab87a0c87c, type: 3}
   - {fileID: 5823213826138541096, guid: 7eadf5ec9e17eef469bd45ddfae106fb, type: 3}
   - {fileID: 8899806721435948145, guid: b3408eb60a1981248ba05ca6fdfb5774, type: 3}
-  - {fileID: 3264743291324940823, guid: 7c99f453b30ce8e4e9c84c18ca44a6e0, type: 3}
   numberOfObstacles: {x: 11, y: 15}
   numberOfUWObstacles: {x: 8, y: 12}
   coin: {fileID: 9064987370366432040, guid: 199875b59dac0c743a38b4b4c07dcfbc, type: 3}

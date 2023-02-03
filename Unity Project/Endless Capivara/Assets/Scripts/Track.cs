@@ -39,6 +39,7 @@ public class Track : MonoBehaviour
 
         //Over Water
         int countObstacle1 = 0;
+        int countObstacle2 = 0;
         for (int i = 0; i < newNumberOfObstacles; i++)
         {
             GameObject obstacle = Obstacles[Random.Range(0, Obstacles.Length)];
@@ -51,6 +52,16 @@ public class Track : MonoBehaviour
             else if (obstacle.name == "3troncos" && countObstacle1 >= 1)
             {
                 i--; //decrementa i para não contar como objeto instanciado
+            }
+            else if (obstacle.name == "Barragem" && countObstacle2 < 1)
+            {
+                newObstacles.Add(Instantiate(obstacle, transform));
+                newObstacles[i].SetActive(false);
+                countObstacle2++;
+            }
+            else if (obstacle.name == "Barragem" && countObstacle2 >= 1)
+            {
+                i--;
             }
             else
             {
@@ -118,6 +129,9 @@ public class Track : MonoBehaviour
 
             if (newObstacles[i].GetComponent<ChangeLane>() != null)
                 newObstacles[i].GetComponent<ChangeLane>().PositionLane();
+
+            if (newObstacles[i].GetComponent<UnderWaterObject>() != null)
+                newObstacles[i].GetComponent<UnderWaterObject>().UWPosition();
         }
     }
 
