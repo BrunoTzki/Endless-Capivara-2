@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7922663419275096447}
   - component: {fileID: 4887289869775835146}
   - component: {fileID: 1356832519120806897}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sphere
   m_TagString: Coin
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 3001395334299562746}
   - component: {fileID: 1027927297818117680}
   - component: {fileID: 3391278710332712549}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Acai Model
   m_TagString: Coin
   m_Icon: {fileID: 0}
@@ -212,7 +212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5039199209206257883}
   - component: {fileID: 2334814274501054181}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Caixote com Moedas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 1588706764629689373}
   - component: {fileID: 2424031677942352824}
   - component: {fileID: 452353094825328498}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: variosAcai
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6101770725646130090}
   - component: {fileID: 7931614125971767508}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Acai Coin (1)
   m_TagString: Coin
   m_Icon: {fileID: 0}
@@ -394,7 +394,7 @@ GameObject:
   - component: {fileID: 354702265592236829}
   - component: {fileID: 2524496964535861207}
   - component: {fileID: 2803797382362330869}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: caixa
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -496,7 +496,7 @@ GameObject:
   - component: {fileID: 8707420585470784975}
   - component: {fileID: 6859562407689715973}
   - component: {fileID: 9106805937752088912}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Acai Model
   m_TagString: Coin
   m_Icon: {fileID: 0}
@@ -601,7 +601,7 @@ GameObject:
   - component: {fileID: 2405252114483167112}
   - component: {fileID: 1099155749764046589}
   - component: {fileID: 6793600419567103238}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sphere
   m_TagString: Coin
   m_Icon: {fileID: 0}
@@ -696,7 +696,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3313550788982481127}
   - component: {fileID: 1676185417629793177}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Acai Coin (3)
   m_TagString: Coin
   m_Icon: {fileID: 0}
@@ -744,7 +744,7 @@ GameObject:
   - component: {fileID: 7292666233624312845}
   - component: {fileID: 4814407395867969735}
   - component: {fileID: 7170828392971954322}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Acai Model
   m_TagString: Coin
   m_Icon: {fileID: 0}
@@ -849,7 +849,7 @@ GameObject:
   - component: {fileID: 4360352656955799114}
   - component: {fileID: 1342853320397739839}
   - component: {fileID: 4874458543681217732}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sphere
   m_TagString: Coin
   m_Icon: {fileID: 0}
@@ -946,7 +946,7 @@ GameObject:
   - component: {fileID: 5834089923584936375}
   - component: {fileID: 8579971547251850621}
   - component: {fileID: 6215529076069637416}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Acai Model
   m_TagString: Coin
   m_Icon: {fileID: 0}
@@ -1049,7 +1049,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1746834048272749917}
   - component: {fileID: 2486296423111167523}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Acai Coin (2)
   m_TagString: Coin
   m_Icon: {fileID: 0}
@@ -1095,7 +1095,7 @@ GameObject:
   m_Component:
   - component: {fileID: 422276105921862815}
   - component: {fileID: 4567530468364044257}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Acai Coin
   m_TagString: Coin
   m_Icon: {fileID: 0}
@@ -1143,7 +1143,7 @@ GameObject:
   - component: {fileID: 1487090167475358258}
   - component: {fileID: 4216183961885174599}
   - component: {fileID: 7747791402978973884}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sphere
   m_TagString: Coin
   m_Icon: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7727516831623068446}
   - component: {fileID: 7320147904511701914}
   - component: {fileID: 327789540653584315}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Lixo
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -215,6 +215,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: latinha (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bc03e4cb406e1f94a82c70881a2f5321,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc03e4cb406e1f94a82c70881a2f5321, type: 3}
 --- !u!4 &5412025943405945054 stripped
@@ -309,6 +314,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: latinha (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bc03e4cb406e1f94a82c70881a2f5321,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc03e4cb406e1f94a82c70881a2f5321, type: 3}
@@ -405,6 +415,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pneu4
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ed10d3c53013d0544bceb388e3ac4e73,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed10d3c53013d0544bceb388e3ac4e73, type: 3}
 --- !u!4 &7387295590964106512 stripped
@@ -499,6 +514,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: latinha
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bc03e4cb406e1f94a82c70881a2f5321,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc03e4cb406e1f94a82c70881a2f5321, type: 3}

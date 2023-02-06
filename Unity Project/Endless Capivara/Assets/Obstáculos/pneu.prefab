@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6816763949001382336}
   - component: {fileID: 8754705171356478730}
   - component: {fileID: 6480259406269254625}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pneu
   m_TagString: Obstacle
   m_Icon: {fileID: 0}

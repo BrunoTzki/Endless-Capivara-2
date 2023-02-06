@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8883543116314067887}
   - component: {fileID: 2587011174302456698}
   - component: {fileID: 1194999197904052638}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Corrido 2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 1393387498493075247}
   - component: {fileID: 1393387498493075246}
   - component: {fileID: 1393387498493075217}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tronco (1)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 7410877696956532275}
   - component: {fileID: 109071495845279853}
   - component: {fileID: 5592399061498773726}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 3troncos
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -540,7 +540,7 @@ GameObject:
   - component: {fileID: 8216105300728918574}
   - component: {fileID: 5410645806080280936}
   - component: {fileID: 3573966937996789833}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Corrido 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -627,7 +627,7 @@ GameObject:
   - component: {fileID: 1288577184711983808}
   - component: {fileID: 3892523322985854474}
   - component: {fileID: 3865571588466276449}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tronco
   m_TagString: Obstacle
   m_Icon: {fileID: 0}

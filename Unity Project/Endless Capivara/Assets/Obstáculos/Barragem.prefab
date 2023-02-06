@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3913151754999227330}
   - component: {fileID: 4874636115174386705}
   - component: {fileID: 6832135613604413762}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Barragem
   m_TagString: Obstacle
   m_Icon: {fileID: 0}

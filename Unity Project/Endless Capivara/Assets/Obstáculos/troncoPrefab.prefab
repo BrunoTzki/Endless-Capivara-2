@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2771487558390355714}
   - component: {fileID: 113357492537615304}
   - component: {fileID: 6441779636816452199}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: troncoPrefab
   m_TagString: Obstacle
   m_Icon: {fileID: 0}

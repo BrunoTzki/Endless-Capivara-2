@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 113357492537615304}
   - component: {fileID: 6441779636816452199}
   - component: {fileID: 1748378207002917588}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Corrido
   m_TagString: Obstacle
   m_Icon: {fileID: 0}

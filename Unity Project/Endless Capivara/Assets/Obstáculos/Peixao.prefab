@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5120603206466208868}
   - component: {fileID: 2851624602790521685}
   - component: {fileID: 9046410597307016051}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Direita
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4828,7 +4828,7 @@ GameObject:
   - component: {fileID: -5736394431920752737}
   - component: {fileID: 855415052666363627}
   - component: {fileID: 4149750914589885544}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Peixao
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -4984,7 +4984,7 @@ GameObject:
   - component: {fileID: 4460790986616856304}
   - component: {fileID: 4280937496959590521}
   - component: {fileID: 6432929212929042063}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Esquerda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9796,7 +9796,7 @@ GameObject:
   - component: {fileID: 2048058925379280289}
   - component: {fileID: 4529044845506018124}
   - component: {fileID: 8752693877856975855}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bunda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14606,7 +14606,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7296721445433950968}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ParticleUW
   m_TagString: Untagged
   m_Icon: {fileID: 0}

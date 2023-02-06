@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5013288559844354028}
   - component: {fileID: 8971670661792832682}
   - component: {fileID: 436559587955563915}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Corrido 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 2771487558390355714}
   - component: {fileID: 113357492537615304}
   - component: {fileID: 158465731471879587}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ObrigaAfundar
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 5539163912209929837}
   - component: {fileID: 1473054947550973624}
   - component: {fileID: 2811022625102984284}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Corrido 2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
